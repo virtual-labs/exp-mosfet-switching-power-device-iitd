@@ -64,6 +64,10 @@ const sliders = {
 
             // !we using temptitle10 as a record btn
             // this.btn_record.item.click()
+            
+            // * show arrow for vIn
+            Dom.setBlinkArrowRed(true,13,-72,35,null,-90).play()
+            setCC("Select V<sub>in</sub>")
           }
         }
 
@@ -87,6 +91,16 @@ const sliders = {
 
             // !we using temptitle10 as a record btn
             this.btn_record.item.click()
+
+            // * show arrow for vIn
+            Dom.setBlinkArrowRed(true,13,-72,35,null,-90).play()
+            setCC("Select V<sub>in</sub>")
+
+            if(currentDifferenceIndex_vIn == differences_vIn.length){
+              // * show arrow for plot
+              Dom.setBlinkArrowRed(true,529,87,35,null,-90).play()
+              setCC("Click on 'Plot'")
+            }
           }else{
             // reset this value because of behaviour of slide
             currentDifferenceIndex_vIn = 0 
@@ -98,6 +112,11 @@ const sliders = {
           let value_R = 50
           var left = 317
           this.sliderAnime(this.slider_R,0,value_R,left)
+
+          // * show arrow for vGs
+          Dom.setBlinkArrowRed(true,0,320,35,null,-90).play()
+          setCC("Select V<sub>GS</sub>")
+          
         }
         break
 
@@ -122,6 +141,7 @@ const sliders = {
         // for the slider vgs
         var value_vGs = 0
         this.slider_vGs.item.onclick = ( )=>{
+          Dom.setBlinkArrowRed(-1)
           if (currentDifferenceIndex_vGs < differences_vGs.length) {
             // Get the current difference
             var currentDifference = differences_vGs[currentDifferenceIndex_vGs];
@@ -139,7 +159,12 @@ const sliders = {
               targets: Scenes.items.niddle_vGs.item,
               easing: "linear",
               duration: 1000,
-              rotate: niddle_vGs_deg[currentDifferenceIndex_vGs]
+              rotate: niddle_vGs_deg[currentDifferenceIndex_vGs],
+              complete(){
+                // * show arrow for vIn
+                Dom.setBlinkArrowRed(true,13,-89,35,null,-90).play()
+                setCC("Select V<sub>in</sub>")
+              }
             })
 
             currentDifferenceIndex_vGs++;
@@ -157,11 +182,20 @@ const sliders = {
         // 11, 160
         // label value 0 to 240
         let currentLabelValue = 0
+        // vIn values
+        let vIn_accept_range = [0,40,80,120,160,200,240]  
+        // onclick accept range for vgs
+        let vGs_accept_range = [5,6,8,10]
         this.slider_vIn.item.onclick = ()=>{
+          Dom.setBlinkArrowRed(-1)
+          // vIn
+          if(currentDifferenceIndex_vGs > differences_vGs.length){
+              return
+          }
           // rotate slider with neddle
           anime.timeline({
             easing: "linear",
-            duration: 5000,
+            duration: 8000,
           })
           .add({
             targets: this.slider_vIn.item,
@@ -173,6 +207,33 @@ const sliders = {
               this.slider_vIn_label.setContent(
                 `${labelValue}<br>volts`
               )
+
+              // ! click the recrod btn
+              let acceptedValueIndex = vIn_accept_range.indexOf(labelValue)
+              if(acceptedValueIndex!=-1){
+                this.btn_record.item.click()
+                // for disabling for old value      
+                vIn_accept_range[acceptedValueIndex] = -1
+                return
+              }
+            },
+            complete:()=>{
+              if(currentDifferenceIndex_vGs < differences_vGs.length){
+                vIn_accept_range = [0,40,80,120,160,200,240] 
+
+                // * show arrow for vGs
+                Dom.setBlinkArrowRed(true,0,328,35,null,-90).play()
+                setCC("Select V<sub>GS</sub>") 
+              }
+              else{
+                currentDifferenceIndex_vGs++
+                Dom.setBlinkArrowRed(-1)
+                Dom.setBlinkArrow(true, 790, 544).play();
+                setCC("Click 'Next' to go to next step");
+                setIsProcessRunning(false);
+                // for going to the second step
+                Scenes.currentStep = 2
+              }
             }
           },0)
           .add({
@@ -186,6 +247,10 @@ const sliders = {
           let value_R = 50
           var left = 304
           this.sliderAnime(this.slider_R,0,value_R,left)
+
+          // * show arrow for vGs
+          Dom.setBlinkArrowRed(true,0,328,35,null,-90).play()
+          setCC("Select V<sub>GS</sub>")
         }
         break
         
@@ -216,6 +281,23 @@ const sliders = {
     
             // Animate the translation on each click
             this.sliderAnime(this.slider_vGs,currentDifference,value_vGs)
+
+            if(currentDifferenceIndex==0){
+              // * show arrow for vIn
+              Dom.setBlinkArrowRed(true,22,-90,35,null,-90).play()
+              setCC("Select V<sub>in</sub>")
+            }
+            else if(currentDifferenceIndex == differences.length - 1){
+              // * show arrow for plot
+              Dom.setBlinkArrowRed(true,802,30,35,null,-90).play()
+              setCC("Click on 'Plot'")
+            }
+            else{
+              // * show arrow for vGs
+              Dom.setBlinkArrowRed(true,0,302,35,null,-90).play()
+              setCC("Select V<sub>GS</sub>")
+            }
+            
             currentDifferenceIndex++;
 
             // !we using temptitle10 as a record btn
@@ -227,12 +309,20 @@ const sliders = {
         this.slider_vIn.item.onclick = ()=>{
           let value_vIn = 200
           this.sliderAnime(this.slider_vIn,0,value_vIn,159)
+
+          // * show arrow for vGs
+          Dom.setBlinkArrowRed(true,0,302,35,null,-90).play()
+          setCC("Select V<sub>GS</sub>")
         }
 
         // ! R onclick 
         this.slider_R.item.onclick = ()=>{
           let value_R = 50
           this.sliderAnime(this.slider_R,0,value_R,376)
+
+          // * show arrow for vGs
+          Dom.setBlinkArrowRed(true,0,302,35,null,-90).play()
+          setCC("Select V<sub>GS</sub>")
         }
         break
     }

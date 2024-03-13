@@ -1046,7 +1046,7 @@ const Scenes = {
       if (exit) {
         // after complete
         // Dom.setBlinkArrow(true, 790, 408).play();
-        setCC("Simulator Done");
+        setCC("Simulation Done");
         setIsProcessRunning(false);
       }
 
@@ -1123,9 +1123,26 @@ const Scenes = {
 
 
       //! Connection Part
+      // to enable startExp Button
+      let partConnectionsIsComplete = false
       function partConnections(){
          // Connection Logic
         Scenes.items.part_1_1_connections_box.set(514,-70).hide()
+
+        // ! btn_reset onclick
+        Scenes.items.btn_reset.item.onclick = ()=>{
+          let box_buttons_reset = document.querySelectorAll(".part_1_1_connections_box button")
+          let temps = {
+            textShadow: "none",
+            color: "black",
+            backgroundColor: "transparent"
+          }
+          box_buttons_reset.forEach(ele=>{
+            let ele_Dom = new Dom(ele)
+            ele_Dom.styles(temps)
+          })
+          Scenes.steps[3]()
+        }
 
         //! connection box onclick
         Scenes.items.btn_connections.item.onclick = ()=>{
@@ -1192,6 +1209,7 @@ const Scenes = {
 
                 Dom.setBlinkArrowRed(true,748,360,35,null,180).play()
                 setCC("Click on Start Experiment")
+                partConnectionsIsComplete = true
               }
             }
             
@@ -1208,10 +1226,12 @@ const Scenes = {
           }
         }
       }
-      // partConnections()
+      partConnections()
 
       //! Graph Part
     function partCalculation(){
+        // for recrod btn
+        let recordBtnIdx = 0
         Scenes.items.part_1_1_calculations.set(-15,-70,480,983)
         Scenes.items.btn_procedure.set(790,132,37).zIndex(10)
         Scenes.items.btn_nomenclature.set(610,132,37,160).zIndex(10)
@@ -1220,9 +1240,9 @@ const Scenes = {
         sliders.showSliderFor("1_1")
 
         // * Graph section
-        Scenes.items.graph_box_3.set(514,174,null,428).zIndex(10)
-        let ctx = Scenes.items.graph3.item
-        let graphIdx = 2
+        Scenes.items.graph_box_1.set(514,174,null,428).zIndex(10)
+        let ctx = Scenes.items.graph1.item
+        let graphIdx = 0
         let xLabel = "Gate to source voltage (V<sub>GS</sub>)"
         let yLabel = "Drain Current (I<sub>D</sub>)"
         let dataLabel = ""
@@ -1241,10 +1261,15 @@ const Scenes = {
 
         // * assume tempTitle10 as a btn record
         let btn_record = sliders.btn_record.item
-
-        // ! btn_record onclick
-        let recordBtnIdx = 0
         
+        // * StepTutorial
+        // show arrow for R
+        Dom.setBlinkArrowRed(true,254,320,35,null,-90).play()
+        setCC("Select R")
+        // and other blink arrow is on sliders.js
+        
+        // ! btn_record onclick
+        recordBtnIdx = 0
         btn_record.onclick = ()=>{
           let rows = table.tBodies[0].rows
           if(recordBtnIdx > rows.length){
@@ -1259,13 +1284,14 @@ const Scenes = {
             10:4,
             15:5,
           }
-          let firstValue = 4
+          let first_vGs_value = 4
+          let last_vGs_value = 15
           let vGs_value = sliders.slider_vGs.getValue()
           let vIn_value = sliders.slider_vIn.getValue()
           let R_value = sliders.slider_R.getValue()
 
           // seting column index for filling the table
-          if(vGs_value == firstValue){
+          if(vGs_value == first_vGs_value){
             rows[recordBtnIdx+1].cells[0].innerHTML = "10"
           }
           rows[recordBtnIdx+1].cells[colIdx[vGs_value]].innerHTML = vIn_value
@@ -1277,6 +1303,10 @@ const Scenes = {
             
             // ! btn Plot onclick
             Scenes.items.btn_plot.item.onclick = ()=>{
+              // shwo arrwo for vGs
+              Dom.setBlinkArrowRed(true,0,320,35,null,-90).play()
+              setCC("Select V<sub>GS</sub>")
+
               // goto default position for vIn value and recordBtnIdx = 0
               function resetFun(){
                 recordBtnIdx=0
@@ -1306,28 +1336,38 @@ const Scenes = {
                 Scenes.graphFeatures.addDataset(graphRef,labelForDataSet,bgColor,data)
               }              
               
-              if(vGs_value!=15){
+              if(vGs_value!=last_vGs_value){
                 resetFun()
               }
               let totalDatasets = 5
               if(Scenes.graphFeatures.getSizeOfDatasets(graphRef) < totalDatasets){
                 addDataToGraph()
               }
+
+              // end the slide
+              if(vGs_value==last_vGs_value){
+                Dom.setBlinkArrowRed(-1)
+                Dom.setBlinkArrow(true, 790, 544).play();
+                setCC("Click 'Next' to go to next step");
+                setIsProcessRunning(false);
+                // for going to the second step
+                Scenes.currentStep = 2
+              }
             }
           }
         }
 
       }
-      // todo remove 
-      hideConnectionStepImgs()
-      partCalculation()
 
       //! onclick start btn
       Scenes.items.btn_start_experiment.item.onclick = ()=>{
-        // * Hide preivous
-        hideConnectionStepImgs()
-        // * calculation part
-        partCalculation()
+        // to enable the button
+        if(partConnectionsIsComplete){
+          // * Hide preivous
+          hideConnectionStepImgs()
+          // * calculation part
+          partCalculation()
+        }
       }
 
       return true
@@ -1335,7 +1375,6 @@ const Scenes = {
 
     (step3 = function () {
       setIsProcessRunning(true);
-
       Scenes.setStepHeading("", "using oscilloscope",true)
       Scenes.items.btn_next.show();
       // ! Step Connection
@@ -1409,9 +1448,26 @@ const Scenes = {
       }
 
       //! Connection Part
+      // to enable startExp Button
+      let partConnectionsIsComplete = false
       function partConnections(){
         // Connection Logic
         Scenes.items.part_1_2_connections_box.set(442,-78).hide()
+
+        // ! btn_reset onclick
+        Scenes.items.btn_reset.item.onclick = ()=>{
+          let box_buttons_reset = document.querySelectorAll(".part_1_2_connections_box button")
+          let temps = {
+            textShadow: "none",
+            color: "black",
+            backgroundColor: "transparent"
+          }
+          box_buttons_reset.forEach(ele=>{
+            let ele_Dom = new Dom(ele)
+            ele_Dom.styles(temps)
+          })
+          Scenes.steps[4]()
+        }
 
         //! connection box onclick
         Scenes.items.btn_connections.item.onclick = ()=>{
@@ -1478,6 +1534,7 @@ const Scenes = {
 
                 Dom.setBlinkArrowRed(true,778,165-temp,35,null,180).play()
                 setCC("Click on Start Experiment")
+                partConnectionsIsComplete = true
               }
             }
             
@@ -1494,14 +1551,18 @@ const Scenes = {
           }
         }
       }
-      // partConnections()
+      partConnections()
 
       //! Graph Part
       function partCalculation(){
+        // show arrow for R
+        Dom.setBlinkArrowRed(true,254,310,35,null,-90).play()
+        setCC("Select R")
+        
         Scenes.items.part_1_2_calculations.set(3,-70,480,963)
         Scenes.items.btn_procedure.set(790-10,90,37).zIndex(10)
         Scenes.items.btn_nomenclature.set(610-10,90,37,160).zIndex(10)
-        Scenes.items.btn_plot.set(512-10,88,43,80).zIndex(10)
+        // Scenes.items.btn_plot.set(512-10,88,43,80).zIndex(10)
 
         // neddle vGs rotate (-1,multipoint) deg
         Scenes.items.niddle_vGs.set(536,29,74).rotate(-1).zIndex(10)
@@ -1513,10 +1574,10 @@ const Scenes = {
         sliders.showSliderFor("1_2")
 
         // * Graph section
-        Scenes.items.graph_box_3.set(499,138,270,440).zIndex(10)
-        let ctx = Scenes.items.graph3.item
-        let graphIdx = 2
-        let xLabel = "Gate to source voltage (V<sub>GS</sub>)"
+        Scenes.items.graph_box_2.set(499,138,270,440).zIndex(10)
+        let ctx = Scenes.items.graph2.item
+        let graphIdx = 1
+        let xLabel = "Dra to source voltage (V<sub>DS</sub>)"
         let yLabel = "Drain Current (I<sub>D</sub>)"
         let dataLabel = ""
         // for setting xy label of graph in position
@@ -1537,89 +1598,71 @@ const Scenes = {
 
         // ! btn_record onclick
         let recordBtnIdx = 0
-        
+        // ! calculation value object
+        let calculationValues = {
+          vDs: [],
+          iD: [],
+        }
         btn_record.onclick = ()=>{
-          let rows = table.tBodies[0].rows
-          if(recordBtnIdx > rows.length){
-            return
-          }
-
-          // * Filling Table
-          let colIdx = {
-            4:1,
-            6:2,
-            8:3,
-            10:4,
-            15:5,
-          }
-          let firstValue = 4
           let vGs_value = sliders.slider_vGs.getValue()
-          let vIn_value = sliders.slider_vIn.getValue()
+          let vIn_value = Math.round(sliders.slider_vIn.getValue())
           let R_value = sliders.slider_R.getValue()
+          let firstValue = 0
 
-          // seting column index for filling the table
-          if(vGs_value == firstValue){
-            rows[recordBtnIdx+1].cells[0].innerHTML = "10"
+          let vGs_idx = {
+            5:0,
+            6:1,
+            8:2,
+            10:3,
           }
-          rows[recordBtnIdx+1].cells[colIdx[vGs_value]].innerHTML = vIn_value
-          recordBtnIdx++
-          console.log(colIdx[vGs_value])
-          // to plot the data
-          if(recordBtnIdx == rows.length - 1){
-            
-            
-            // ! btn Plot onclick
-            Scenes.items.btn_plot.item.onclick = ()=>{
-              // goto default position for vIn value and recordBtnIdx = 0
-              function resetFun(){
-                recordBtnIdx=0
-                let defaultLeftPos = 24
-                Anime.moveLeft(sliders.slider_vIn.item,defaultLeftPos)
-              }
-              // for adding data to graph
-              function addDataToGraph(){
-                let data = []
-                for(let row of rows){
-                  let x = vGs_value
-                  let y = row.cells[colIdx[vGs_value]].innerHTML
-                  data.push({x,y})
-                }
-                let bgColors = [
-                  "-",
-                  "#da120f",
-                  "#0607c2",
-                  "#e413e6",
-                  "#25de22",
-                  "#000000"
-                ]
-                let bgColor = bgColors[colIdx[vGs_value]]
-                let labelForDataSet = `Vgs = ${vGs_value}V`
 
-                // add data set
-                Scenes.graphFeatures.addDataset(graphRef,labelForDataSet,bgColor,data)
-              }              
-              
-              if(vGs_value!=15){
-                resetFun()
-              }
-              let totalDatasets = 5
-              if(Scenes.graphFeatures.getSizeOfDatasets(graphRef) < totalDatasets){
-                addDataToGraph()
-              }
-            }
+          // vIn values
+          let vIn_accept_range = [0,40,80,120,160,200,240]  
+          let acceptedValueIndex = vIn_accept_range.indexOf(vIn_value)
+          
+          // for the first value add data set
+          if(vIn_value==firstValue){
+            // add datasets to graph
+            let bgColors = [
+              "#ff0000",
+              "#375623",
+              "#7030a0",
+              "#ffc000",
+            ]
+            let bgColor = bgColors[vGs_idx[vGs_value]]
+            let labelForDataSet = `Vgs = ${vGs_value}V`
+
+            // add data set
+            Scenes.graphFeatures.addDataset(graphRef,labelForDataSet,bgColor,[])            
+          }
+          else{
+            // adding data to graph
+            let datasetIndex = vGs_idx[vGs_value]
+            let temp_vDs = [10,20,30,40,50,60]
+
+            //! add formula value here
+            calculationValues.vDs.push(temp_vDs[acceptedValueIndex-1])
+            calculationValues.iD.push(vIn_value)
+
+            let x = calculationValues.vDs[acceptedValueIndex-1]
+            let y = calculationValues.iD[acceptedValueIndex-1] * vGs_value
+            let data = {x,y}
+
+            Scenes.graphFeatures.addData(graphRef,datasetIndex,data)                        
           }
         }
 
       }
-      hideConnectionStepImgs()
-      partCalculation()
 
       //! onclick start btn
       Scenes.items.btn_start_experiment.item.onclick = ()=>{
-        // * Hide preivous
-        hideConnectionStepImgs()
-        // * calculation part
-        partCalculation()
+        // to enable the button
+        if(partConnectionsIsComplete){
+          // * Hide preivous
+          hideConnectionStepImgs()
+          // * calculation part
+          partCalculation()
+        }
       }
 
       return true
@@ -1648,8 +1691,8 @@ const Scenes = {
       // required images
       let images = [
         Scenes.items.part_2_connections_components.set(0,0).zIndex(1),
-        Scenes.items.part_2_conncection_supply_1_red_button.set(150,118,20,23).zIndex(10),
-        Scenes.items.part_2_conncection_supply_2_red_button.set(155,311,22,23).zIndex(10),
+        Scenes.items.part_2_conncection_supply_1_red_button.set(153,60,24,23).zIndex(10),
+        Scenes.items.part_2_conncection_supply_2_red_button.set(158,296,27,23).zIndex(10),
         Scenes.items.part_2_connections_box,
       ]
 
@@ -1696,9 +1739,26 @@ const Scenes = {
         Dom.setBlinkArrowRed(-1)
       }
       //! Connection Part
+      // to enable startExp Button
+      let partConnectionsIsComplete = false
       function partConnections(){
          // Connection Logic
         Scenes.items.part_2_connections_box.set(442,-84).hide()
+
+        // ! btn_reset onclick
+        Scenes.items.btn_reset.item.onclick = ()=>{
+          let box_buttons_reset = document.querySelectorAll(".part_2_connections_box button")
+          let temps = {
+            textShadow: "none",
+            color: "black",
+            backgroundColor: "transparent"
+          }
+          box_buttons_reset.forEach(ele=>{
+            let ele_Dom = new Dom(ele)
+            ele_Dom.styles(temps)
+          })
+          Scenes.steps[5]()
+        }
 
         //! connection box onclick
         Scenes.items.btn_connections.item.onclick = ()=>{
@@ -1746,8 +1806,8 @@ const Scenes = {
           if(btnClickedCount==10){
             
             //! First red button click 
-            Scenes.items.part_1_slide_3_compo_1_text.set(178,144,50).zIndex(10)
-            Dom.setBlinkArrowRed(true,186,113).play()
+            Scenes.items.part_1_slide_3_compo_1_text.set(178,144-55,50).zIndex(10)
+            Dom.setBlinkArrowRed(true,186,113-55).play()
             setCC("Switch on Main Supply")
             Scenes.items.part_2_conncection_supply_1_red_button.item.onclick = ()=>{
               
@@ -1755,8 +1815,8 @@ const Scenes = {
               Scenes.items.part_1_slide_3_compo_1_text.hide()
               //! Second red button click
               
-              Scenes.items.part_1_slide_3_compo_2_text.set(178,338,56).zIndex(10)
-              Dom.setBlinkArrowRed(true,186,306).play()
+              Scenes.items.part_1_slide_3_compo_2_text.set(178,338-13,56).zIndex(10)
+              Dom.setBlinkArrowRed(true,186,306-13).play()
               setCC("Switch on Gate Supply")
 
               Scenes.items.part_2_conncection_supply_2_red_button.item.onclick = ()=>{
@@ -1765,6 +1825,7 @@ const Scenes = {
 
                 Dom.setBlinkArrowRed(true,745,360,35,null,180).play()
                 setCC("Click on Start Experiment")
+                partConnectionsIsComplete = true
               }
             }
             
@@ -1785,6 +1846,10 @@ const Scenes = {
 
       //! Graph Part
       function partCalculation(){
+        // show arrow for R
+        Dom.setBlinkArrowRed(true,317,302,35,null,-90).play()
+        setCC("Select R")
+
         Scenes.items.part_2_calculation_components.set(0,-85,475,950)
         Scenes.items.btn_nomenclature.set(785,-75,30).zIndex(10)
         Scenes.items.btn_procedure.set(785,-10,33).zIndex(10)
@@ -1793,7 +1858,7 @@ const Scenes = {
         sliders.showSliderFor("2")
 
         // * Graph section
-        Scenes.items.graph_box_3.set(575,162,null,370).zIndex(10)
+        Scenes.items.graph_box_3.set(580,162,242,365).zIndex(10)
         let ctx = Scenes.items.graph3.item
         let graphIdx = 2
         let xLabel = "Gate to source voltage (V<sub>GS</sub>)"
@@ -1801,7 +1866,12 @@ const Scenes = {
         let dataLabel = "vDS = 50"
         // ploting empty graph
         let graphRef = Scenes.plotGraph(ctx,graphIdx,[],dataLabel,xLabel,yLabel,true)
-
+        // for setting xy label of graph in position
+        function setXYLabel(){
+          Scenes.items.xLabel.set(664, 375)
+          Scenes.items.yLabel.set(507, 263)
+        }
+        setXYLabel()
 
         let table = new Dom(".part_2_table").set(600,-76).item
         // * assume tempTitle10 as a btn record
@@ -1832,6 +1902,13 @@ const Scenes = {
               }
 
               Scenes.graphFeatures.addData(graphRef,0,data)
+
+              Dom.setBlinkArrowRed(-1)
+              Dom.setBlinkArrow(true, 790, 544).play();
+              setCC("Click 'Next' to go to next step");
+              setIsProcessRunning(false);
+              // for going to the second step
+              Scenes.currentStep = 2
             }
           }
         }
@@ -1840,10 +1917,13 @@ const Scenes = {
 
       //! onclick start btn
       Scenes.items.btn_start_experiment.item.onclick = ()=>{
-        // * Hide preivous
-        hideConnectionStepImgs()
-        // * calculation part
-        partCalculation()
+        // to enable the button
+        if(partConnectionsIsComplete){
+          // * Hide preivous
+          hideConnectionStepImgs()
+          // * calculation part
+          partCalculation()
+        }
       }
 
       return true
