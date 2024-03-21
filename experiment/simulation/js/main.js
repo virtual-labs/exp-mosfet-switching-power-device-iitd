@@ -607,8 +607,7 @@ const Scenes = {
 
     // part2 calculation
     part_2_calculation_components : new Dom("part_2_calculation_components"),
-    niddle_vGs: new Dom("niddle_vGs"),
-    niddle_vIn: new Dom("niddle_vIn"),
+ 
 
     //* 29 feb new imgs
     
@@ -623,6 +622,25 @@ const Scenes = {
     part_3_table_2 : new Dom("part_3_table_2"),
     part_3_table_3 : new Dom("part_3_table_3"),
     part_3_text : new Dom("part_3_text"),
+
+    niddle_vGs: new Dom("niddle_vGs"),
+    niddle_vIn: new Dom("niddle_vIn"),
+    
+      // * for PROCEDURE and instruction NOMENCLATURE
+
+      part_1_1_instruction : new Dom("part_1_1_instruction"),
+      part_1_1_nomenclature : new Dom("part_1_1_nomenclature"),
+      part_1_1_procedure : new Dom("part_1_1_procedure"),
+      part_1_2_instruction : new Dom("part_1_2_instruction"),
+      part_1_2_nomenclature : new Dom("part_1_2_nomenclature"),
+      part_1_2_procedure : new Dom("part_1_2_procedure"),
+      part_2_instruction : new Dom("part_2_instruction"),
+      part_2_nomenclature : new Dom("part_2_nomenclature"),
+      part_2_procedure : new Dom("part_2_procedure"),
+      part_3_nomenclature : new Dom("part_3_nomenclature"),
+      part_3_procedure : new Dom("part_3_procedure"),
+      
+
 
 
     domQs1: new Dom("domQs1"),
@@ -845,6 +863,95 @@ const Scenes = {
       Scenes.items.stepDescription.styles(st)
     }
   },
+
+  //* for hover on instuction , procedure and nomenclature
+
+  // not done yet
+  showPopup(step){
+
+    let instructionBtn = Scenes.items.btn_instructions.zIndex(1000)
+    let procedureBtn = Scenes.items.btn_procedure.zIndex(1000)
+    let nomenclatureBtn = Scenes.items.btn_nomenclature.zIndex(1000)
+    let instructionImg, procedureImg, nomenclatureImg;
+    
+    let btn = [
+      instructionBtn, 
+      procedureBtn,
+      nomenclatureBtn,
+    ]
+
+    switch(step){
+      case "1_1" : 
+            instructionImg = Scenes.items.part_1_1_instruction;
+            procedureImg = Scenes.items.part_1_1_procedure.set(-150).hide();
+            nomenclatureImg = Scenes.items.part_1_1_nomenclature;
+
+            console.log("case3")
+
+            break;
+
+      case "1_2" :  instructionImg = Scenes.items.part_1_2_instruction;
+                procedureImg = Scenes.items.part_1_2_procedure.set(-80,null,320).hide();
+                nomenclatureImg = Scenes.items.part_1_2_nomenclature.set(-100).hide();
+                console.log("case4")
+            break;
+
+      case "2" :  instructionImg = Scenes.items.part_2_instruction;
+                procedureImg = Scenes.items.part_2_procedure.set(null,-80).hide();
+                nomenclatureImg = Scenes.items.part_2_nomenclature.set(null,-80).hide();  
+
+            break;
+
+      case "3" :  
+      procedureImg = Scenes.items.part_3_procedure;
+      nomenclatureImg = Scenes.items.part_3_nomenclature;  
+      
+            break;
+          }
+
+    let showInstructionImg = function(){
+      instructionImg.show().zIndex(40)
+    }
+
+    let showProcedureImg = function(){
+      procedureImg.show().zIndex(40)
+
+    }
+
+    let showNomenclatureImg = function(){
+      nomenclatureImg.show().zIndex(40)
+
+    }
+    
+    let hideInstructionImg = function(){
+      instructionImg.hide()
+    }
+
+    let hideProcedureImg = function(){
+      procedureImg.hide()
+
+    }
+
+    let hideNomenclatureImg = function(){
+      nomenclatureImg.hide()
+
+    }
+    
+
+    btn[0].item.onmouseover = showInstructionImg
+    btn[0].item.onmouseout = hideInstructionImg
+
+    btn[1].item.onmouseover = showProcedureImg
+    btn[1].item.onmouseout = hideProcedureImg
+
+    btn[2].item.onmouseover = showNomenclatureImg
+    btn[2].item.onmouseout = hideNomenclatureImg
+
+ 
+
+    
+
+  },
   // for typing hello text
   intru: null,
   intruVoice: null,
@@ -938,12 +1045,12 @@ const Scenes = {
       Dom.hideAll();
 
       // require
-      let btn_transparent = Scenes.items.btn_transparent.set().item;
+      let btn_transparent = Scenes.items.btn_transparent.set().zIndex(6000).item;
 
       Scenes.items.concept_development.set().styles({
         zIndex: "5000",
-        scale: "1 0.9",
-        top: "-140px",
+        scale: "1 0.914",
+        top: "-143px",
         position: "absolute",
       })
 
@@ -1072,6 +1179,7 @@ const Scenes = {
           .zIndex(10),
         Scenes.items.btn_reset.set(660, 190 + 165, 40).zIndex(10)
       ]
+
 
       // required images
       let images = [
@@ -1290,13 +1398,15 @@ const Scenes = {
           let vIn_value = sliders.slider_vIn.getValue()
           let R_value = sliders.slider_R.getValue()
 
+          updateValues(vIn_value,vGs_value,R_value)
+
           // seting column index for filling the table
           if(vGs_value == first_vGs_value){
-            rows[recordBtnIdx+1].cells[0].innerHTML = "10"
+            // vds value
+            rows[recordBtnIdx+1].cells[0].innerHTML = Formulas.usingMeters.vDS(recordBtnIdx)
           }
-          rows[recordBtnIdx+1].cells[colIdx[vGs_value]].innerHTML = vIn_value
+          rows[recordBtnIdx+1].cells[colIdx[vGs_value]].innerHTML = Formulas.usingMeters.iD(values,colIdx[vGs_value],recordBtnIdx)
           recordBtnIdx++
-          console.log(colIdx[vGs_value])
           // to plot the data
           if(recordBtnIdx == rows.length - 1){
             
@@ -1317,7 +1427,7 @@ const Scenes = {
               function addDataToGraph(){
                 let data = []
                 for(let row of rows){
-                  let x = vGs_value
+                  let x = row.cells[0].innerHTML
                   let y = row.cells[colIdx[vGs_value]].innerHTML
                   data.push({x,y})
                 }
@@ -1359,6 +1469,10 @@ const Scenes = {
 
       }
 
+
+      //to show btn popup
+      Scenes.showPopup("1_1")
+
       //! onclick start btn
       Scenes.items.btn_start_experiment.item.onclick = ()=>{
         // to enable the button
@@ -1367,6 +1481,8 @@ const Scenes = {
           hideConnectionStepImgs()
           // * calculation part
           partCalculation()
+          //to show btn popup
+          Scenes.showPopup("1_1")
         }
       }
 
@@ -1421,7 +1537,6 @@ const Scenes = {
         ele.set(l,t,h,w).hide()
       })
 
-
       let cables_color = [
         "#e40d0d",
         "#162848",
@@ -1434,8 +1549,6 @@ const Scenes = {
         "#974f1e",
         "#670202",
       ]
-      
-
 
       function hideConnectionStepImgs(){
         let allImages = [
@@ -1569,7 +1682,6 @@ const Scenes = {
         // neddle vIn rotate (-1,126) deg
         Scenes.items.niddle_vIn.set(755,29,74).rotate(-1).zIndex(10)
 
-
         // * Calling slider
         sliders.showSliderFor("1_2")
 
@@ -1600,8 +1712,10 @@ const Scenes = {
         let recordBtnIdx = 0
         // ! calculation value object
         let calculationValues = {
-          vDs: [],
-          iD: [],
+          vDs: [0,10,20,30,40,50,60],
+          iD: [
+            [],[],[],[],[]
+          ],
         }
         btn_record.onclick = ()=>{
           let vGs_value = sliders.slider_vGs.getValue()
@@ -1609,50 +1723,63 @@ const Scenes = {
           let R_value = sliders.slider_R.getValue()
           let firstValue = 0
 
+          updateValues(vIn_value,vGs_value,R_value)
+
           let vGs_idx = {
-            5:0,
-            6:1,
-            8:2,
-            10:3,
+            4:1,
+            6:2,
+            8:3,
+            10:4,
+            15:5,
           }
+          let first_vGs_value = 4
+          let last_vGs_value = 15
 
           // vIn values
           let vIn_accept_range = [0,40,80,120,160,200,240]  
           let acceptedValueIndex = vIn_accept_range.indexOf(vIn_value)
-          
+          let datasetIndex = vGs_idx[vGs_value] - 1 // which value perform for vgs
+
           // for the first value add data set
-          if(vIn_value==firstValue){
+          if(vIn_value == firstValue){
             // add datasets to graph
             let bgColors = [
-              "#ff0000",
-              "#375623",
-              "#7030a0",
-              "#ffc000",
+              "_",
+              "#da120f",
+              "#0607c2",
+              "#e413e6",
+              "#25de22",
+              "#000000"
             ]
             let bgColor = bgColors[vGs_idx[vGs_value]]
             let labelForDataSet = `Vgs = ${vGs_value}V`
 
             // add data set
-            Scenes.graphFeatures.addDataset(graphRef,labelForDataSet,bgColor,[])            
+            Scenes.graphFeatures.addDataset(graphRef,labelForDataSet,bgColor,[])
+
+            // * add first value also
+            let x = Formulas.usingOscilloscope.vDS(acceptedValueIndex)
+            let y = Formulas.usingOscilloscope.iD(values,vGs_idx[vGs_value],x)
+            Scenes.graphFeatures.addData(graphRef,datasetIndex,{x,y})
           }
           else{
             // adding data to graph
-            let datasetIndex = vGs_idx[vGs_value]
-            let temp_vDs = [10,20,30,40,50,60]
+            // datasetIndex = vGs_idx[vGs_value] - 1
 
             //! add formula value here
-            calculationValues.vDs.push(temp_vDs[acceptedValueIndex-1])
-            calculationValues.iD.push(vIn_value)
-
-            let x = calculationValues.vDs[acceptedValueIndex-1]
-            let y = calculationValues.iD[acceptedValueIndex-1] * vGs_value
+            let x = Formulas.usingOscilloscope.vDS(acceptedValueIndex)
+            let y = Formulas.usingOscilloscope.iD(values,vGs_idx[vGs_value],acceptedValueIndex)
             let data = {x,y}
+            console.log("S: ",vGs_value,vGs_idx[vGs_value])
 
-            Scenes.graphFeatures.addData(graphRef,datasetIndex,data)                        
+            Scenes.graphFeatures.addData(graphRef,datasetIndex,data)
           }
         }
 
       }
+
+      //to show btn popup
+      Scenes.showPopup("1_2")
 
       //! onclick start btn
       Scenes.items.btn_start_experiment.item.onclick = ()=>{
@@ -1662,6 +1789,9 @@ const Scenes = {
           hideConnectionStepImgs()
           // * calculation part
           partCalculation()
+
+          //to show btn popup
+          Scenes.showPopup("1_2")
         }
       }
 
@@ -1885,9 +2015,14 @@ const Scenes = {
             return
           }
 
+          let vGs_value = sliders.slider_vGs.getValue()
+          let vIn_value = Math.round(sliders.slider_vIn.getValue())
+          let R_value = sliders.slider_R.getValue()
+          updateValues(vIn_value,vGs_value,R_value)
+
           // * Filling Table
-          rows[recordBtnIdx].cells[0].innerHTML = "10"
-          rows[recordBtnIdx].cells[1].innerHTML = "12"
+          rows[recordBtnIdx].cells[0].innerHTML = vGs_value
+          rows[recordBtnIdx].cells[1].innerHTML = Formulas.transferCharacteristics.iD(values,recordBtnIdx)
           recordBtnIdx++
 
           // to plot the data
@@ -1915,6 +2050,9 @@ const Scenes = {
 
       }
 
+      //to show btn popup
+      Scenes.showPopup("2")
+
       //! onclick start btn
       Scenes.items.btn_start_experiment.item.onclick = ()=>{
         // to enable the button
@@ -1923,6 +2061,8 @@ const Scenes = {
           hideConnectionStepImgs()
           // * calculation part
           partCalculation()
+          //to show btn popup
+          Scenes.showPopup("2")
         }
       }
 
@@ -1963,6 +2103,9 @@ const Scenes = {
 
         
       }
+
+      //to show btn popup
+      Scenes.showPopup("3")
 
       return true;
     }),
@@ -2034,7 +2177,7 @@ const Scenes = {
 // rangeSlider();
 
 // stepcalling
-Scenes.currentStep = 2
+Scenes.currentStep = 1
 
 Scenes.next()
 // Scenes.steps[3]()

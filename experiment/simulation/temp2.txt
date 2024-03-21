@@ -1,53 +1,81 @@
 
      <img
         class="main-window-imgs"
-        src="./src/images/part_3_components.png"
+        src="./src/images/part_1_1_instruction.png"
     />
     
      <img
         class="main-window-imgs"
-        src="./src/images/part_3_graph.png"
+        src="./src/images/part_1_1_nomenclature.png"
     />
     
      <img
         class="main-window-imgs"
-        src="./src/images/part_3_off_button.png"
+        src="./src/images/part_1_1_procedure.png"
     />
     
      <img
         class="main-window-imgs"
-        src="./src/images/part_3_table_1.png"
+        src="./src/images/part_1_2_instruction.png"
     />
     
      <img
         class="main-window-imgs"
-        src="./src/images/part_3_table_2.png"
+        src="./src/images/part_1_2_nomenclature.png"
     />
     
      <img
         class="main-window-imgs"
-        src="./src/images/part_3_table_3.png"
+        src="./src/images/part_1_2_procedure.png"
     />
     
      <img
         class="main-window-imgs"
-        src="./src/images/part_3_text.png"
+        src="./src/images/part_2_instruction.png"
+    />
+    
+     <img
+        class="main-window-imgs"
+        src="./src/images/part_2_nomenclature.png"
+    />
+    
+     <img
+        class="main-window-imgs"
+        src="./src/images/part_2_procedure.png"
+    />
+    
+     <img
+        class="main-window-imgs"
+        src="./src/images/part_3_nomenclature.png"
+    />
+    
+     <img
+        class="main-window-imgs"
+        src="./src/images/part_3_procedure.png"
     />
     
 
-part_3_components:this.allImgsDom[index++],
-part_3_graph:this.allImgsDom[index++],
-part_3_off_button:this.allImgsDom[index++],
-part_3_table_1:this.allImgsDom[index++],
-part_3_table_2:this.allImgsDom[index++],
-part_3_table_3:this.allImgsDom[index++],
-part_3_text:this.allImgsDom[index++],
+part_1_1_instruction:this.allImgsDom[index++],
+part_1_1_nomenclature:this.allImgsDom[index++],
+part_1_1_procedure:this.allImgsDom[index++],
+part_1_2_instruction:this.allImgsDom[index++],
+part_1_2_nomenclature:this.allImgsDom[index++],
+part_1_2_procedure:this.allImgsDom[index++],
+part_2_instruction:this.allImgsDom[index++],
+part_2_nomenclature:this.allImgsDom[index++],
+part_2_procedure:this.allImgsDom[index++],
+part_3_nomenclature:this.allImgsDom[index++],
+part_3_procedure:this.allImgsDom[index++],
 
 
-part_3_components : new Dom("part_3_components"),
-part_3_graph : new Dom("part_3_graph"),
-part_3_off_button : new Dom("part_3_off_button"),
-part_3_table_1 : new Dom("part_3_table_1"),
-part_3_table_2 : new Dom("part_3_table_2"),
-part_3_table_3 : new Dom("part_3_table_3"),
-part_3_text : new Dom("part_3_text"),
+part_1_1_instruction : new Dom("part_1_1_instruction"),
+part_1_1_nomenclature : new Dom("part_1_1_nomenclature"),
+part_1_1_procedure : new Dom("part_1_1_procedure"),
+part_1_2_instruction : new Dom("part_1_2_instruction"),
+part_1_2_nomenclature : new Dom("part_1_2_nomenclature"),
+part_1_2_procedure : new Dom("part_1_2_procedure"),
+part_2_instruction : new Dom("part_2_instruction"),
+part_2_nomenclature : new Dom("part_2_nomenclature"),
+part_2_procedure : new Dom("part_2_procedure"),
+part_3_nomenclature : new Dom("part_3_nomenclature"),
+part_3_procedure : new Dom("part_3_procedure"),

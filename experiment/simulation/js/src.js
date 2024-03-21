@@ -133,6 +133,21 @@ const src = {
       niddle_vGs: this.allImgsDom[index++],
       niddle_vIn: this.allImgsDom[index++],
 
+      
+      // * for PROCEDURE and instruction NOMENCLATURE
+
+      part_1_1_instruction:this.allImgsDom[index++],
+      part_1_1_nomenclature:this.allImgsDom[index++],
+      part_1_1_procedure:this.allImgsDom[index++],
+      part_1_2_instruction:this.allImgsDom[index++],
+      part_1_2_nomenclature:this.allImgsDom[index++],
+      part_1_2_procedure:this.allImgsDom[index++],
+      part_2_instruction:this.allImgsDom[index++],
+      part_2_nomenclature:this.allImgsDom[index++],
+      part_2_procedure:this.allImgsDom[index++],
+      part_3_nomenclature:this.allImgsDom[index++],
+      part_3_procedure:this.allImgsDom[index++],
+
 
       // * Question Mark
       domQs1: this.allQsDom[0],
