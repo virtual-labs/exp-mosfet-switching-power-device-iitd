@@ -2,7 +2,7 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "1. In SCR, the magnitude of latching current (IL) compared to holding current (IH) is:",
+      "question": "1. In SCR, the magnitude of latching current (I<sub>L</sub>) compared to holding current (I<sub>H</sub>) is:",
       "answers": {  
         "a": "Higher",
         "b": "Lower",
@@ -22,10 +22,10 @@
     {
       "question": "2. The v-i characteristics of SCR is a plot between:",
       "answers": {
-        "a": "Gate voltage (vg)-vs-Anode Current (iA)",
-        "b": "Anode-to-Cathode voltage (vAK)-vs-Anode Current (iA)",
-        "c": "Anode-to-Cathode voltage (vAK)-vs-Gate Current (Ig)",
-        "d": "Gate voltage (vg)-vs-Gate Current (Ig)"
+        "a": "Gate voltage (v<sub>g</sub>)-vs-Anode Current (i<sub>A</sub>)",
+        "b": "Anode-to-Cathode voltage (v<sub>AK</sub>)-vs-Anode Current (i<sub>A</sub>)",
+        "c": "Anode-to-Cathode voltage (v<sub>AK</sub>)-vs-Gate Current (I<sub>g</sub>)",
+        "d": "Gate voltage (v<sub>g</sub>)-vs-Gate Current (I<sub>g</sub>)"
       },
       "explanations": {
         "a": "Explanation 1  <a href='www.google.com'>here</a>",
@@ -39,7 +39,7 @@
     
     {
       
-      "question": "3. The minimum value of anode current (iA) below which the SCR turns-OFF is called the",
+      "question": "3. The minimum value of anode current (i<sub>A</sub>) below which the SCR turns-OFF is called the",
       "answers": {
         "a": "Peak anode current",
         "b": "Latching current",
@@ -58,12 +58,12 @@
         
     {
 
-      "question": "4. Under forward blocking state, the three junctions of the SCR (J1, J2 and J3) are in which states?<br><center><img src='images/pos2.png' height='300px'></center><br>",
+      "question": "4. Under forward blocking state, the three junctions of the SCR (J<sub>1</sub>, J<sub>2</sub> and J<sub>3</sub>) are in which states?<br><center><img src='images/pos2.png' height='300px'></center><br>",
       "answers": {
         "a": "All are forward biased",
         "b": "All are reverse biased",
-        "c": "‘J1, J3 ‘ are forward biased while ‘J2 ‘ is reverse biased",
-        "d": "‘J1, J2 ‘ are forward biased while ‘J3 ‘ is reverse biased"
+        "c": "'J<sub>1</sub>, J<sub>3</sub>' are forward biased while 'J<sub>2</sub>' is reverse biased",
+        "d": "'J<sub>1</sub>, J<sub>2</sub>' are forward biased while 'J<sub>3</sub>' is reverse biased"
       },
       "explanations": {
         "a": "Explanation 1  <a href='www.google.com'>here</a>",
@@ -114,10 +114,10 @@
       {
       "question": "7. In practice, the correct method of turning-ON a SCR is?",
       "answers": {
-        "a": "Increasing the anode-to-cathode voltage (vAK ) till it reaches a value equal to or above forward breakover voltage (vBO ).",
-        "b": "The anode-to-cathode voltage (vAK ) is maintained below the breakover voltage (vBO ) and a positive voltage between the gate and cathode (Vg ) is applied across SCR.",
-        "c": "Increasing the anode-to-cathode voltage (vAK ) till the anode current (iA) reaches above holding current (IH ).",
-        "d": "Positive anode-to-cathode voltage (vAK ) automatically turns- ON the SCR."
+        "a": "Increasing the anode-to-cathode voltage (v<sub>AK</sub>) till it reaches a value equal to or above forward breakover voltage (v<sub>BO</sub>).",
+        "b": "The anode-to-cathode voltage (v<sub>AK</sub>) is maintained below the breakover voltage (v<sub>BO</sub>) and a positive voltage between the gate and cathode (V<sub>g</sub>) is applied across SCR.",
+        "c": "Increasing the anode-to-cathode voltage (v<sub>AK</sub>) till the anode current (i<sub>A</sub>) reaches above holding current (I<sub>H</sub>).",
+        "d": "Positive anode-to-cathode voltage (v<sub>AK</sub>) automatically turns- ON the SCR."
       },
       "explanations": {
         "a": "Explanation 1  <a href='www.google.com'>here</a>",
@@ -132,9 +132,9 @@
       {
       "question": "8. How can a conducting SCR be turned-OFF?",
       "answers": {
-        "a": "By application of negative anode current (iA) or negative anode-to-cathode voltage (vAK).",
-        "b": "By application of negative gate current (Ig).",
-        "c": "By reducing the gate current (Ig) to zero.",
+        "a": "By application of negative anode current (i<sub>A</sub>) or negative anode-to-cathode voltage (v<sub>AK</sub>).",
+        "b": "By application of negative gate current (I<sub>g</sub>).",
+        "c": "By reducing the gate current (I<sub>g</sub>) to zero.",
         "d": "All of the above methods are correct."
       },
       "explanations": {
