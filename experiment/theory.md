@@ -54,9 +54,8 @@ Fig. 2. Internal structure of SCR.
 
 1.	Silicon-controlled rectifier (SCR) is a semiconductor power device. It is used as a controlled switch in power electronic circuits as bistable switches (ON/ OFF State). In utility dc transmission line applications, series-connected SCRs are employed in It finds wide applications in AC-DC rectifiers, Choppers, AC Voltage controllers, Cycloconverters and Inverters.<br>
 
-2.	It has a four layer PNPN structure: Two P-type doped (p) layers, Two N-type doped layers, one is heavy doped (n+) and lightly doped (n-). It has three junctions: p-n (J1), n-p (J2) and p-n+ (J3). <br>
-
-3.	 The  SCR has three external terminals namely: Anode (A), Cathode (K) and Gate (G). <br><br>
+2.	It has a four layer PNPN structure: Two P-type doped (p) layers, Two N-type doped layers, one is heavy doped (n+) and lightly doped (n-). It has three junctions: p-n (J1), n-p (J2) and p-n+ (J3).<br>
+3.	The  SCR has three external terminals namely: Anode (A), Cathode (K) and Gate (G). <br><br>
 
 **Operating modes of SCR:**
 <br>
