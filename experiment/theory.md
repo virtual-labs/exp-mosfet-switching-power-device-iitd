@@ -157,8 +157,11 @@ SCR mounted on a heat sink
 </center>
 </td>
 <td style="width:50%">
+   
+<center>
   
-**1** 
+**1**
+</center> 
     </td>
   </tr>
 
@@ -253,4 +256,153 @@ DC-Ammeter
   </tr>
 </table>
 
+
+
+**•	Method-2: Using Digital Oscilloscope (DSO)**
+</div>
+
+<center>
+<img src="images/th10.png" height="350px">
+
+<br>
+Fig. 6. Circuit Diagram using probes.
+<br>
+</center>
+<br>
+
+Steps for experimentation (Refer Fig. 6): 
+
+  1.	A hall effect current probe is used to measure the anode current (iA) and a differential voltage probe (DVP) to is used to measure the anode-to-cathode voltage (vAK).<br>
+  2.	Measure the anode current using the hall effect current probe (connect this probe to channel-2 of DSO which displays on y-axis). The voltage probe is connected across the SCR to measure the anode-to-cathode voltage (connect this probe to channel-1 of DSO which displays on x-axis).<br>
+  3.	The gate supply circuit consists of a battery in series with a rheostat and a DC ammeter. The rheostat (Rg) limits the gate current (Ig) magnitude since only a very small amount of gate current is required to trigger the SCR into ON-state.<br>
+  4.	Increase the input supply voltage (vin) gradually and observe the current-vs-voltage profile simultaneously on the DSO screen. This trace is the v-i characteristics of the SCR.<br<br>
+  
+
+
+**Instruments required for the above method:**
+
+
+<table border="0" align="center" style="width:100%; border:none;">
+  <tr>
+<td style="width:50%">
+<center>
+  
+**Instrument**
+</center>
+</td>
+<td style="width:50%">
+  
+<center>
+  
+**Quantity**
+</center> 
+    </td>
+  </tr>
+
+  <tr>
+<td style="width:50%">
+<center>
+  
+SCR mounted on a heat sink
+</center>
+</td>
+<td style="width:50%">
+  
+<center>
+  
+**1**
+</center> 
+    </td>
+  </tr>
+
+  <tr>
+<td style="width:50%">
+<center>
+Variable AC supply (autotransformer)
+</center>
+</td>
+<td style="width:50%">
+  
+<center>
+  
+**1**
+</center> 
+    </td>
+  </tr>
+
+  <tr>
+<td style="width:50%">
+<center>
+Rheostats (Rating: 1 KΩ, 100 KΩ)
+</center>
+</td>
+<td style="width:50%">
+  
+<center>
+  
+**2**
+</center> 
+    </td>
+  </tr>
+  
+  <tr>
+<td style="width:50%">
+<center>
+Multi-meter
+</center>
+</td>
+<td style="width:50%">
+  
+<center>
+  
+**1**
+</center> 
+    </td>
+  </tr>
+  
+  <tr>
+<td style="width:50%">
+<center>
+Digital Oscilloscope (DSO)
+</center>
+</td>
+<td style="width:50%">
+  
+<center>
+  
+**1**
+</center> 
+    </td>
+  </tr>
+  
+  <tr>
+<td style="width:50%">
+<center>
+Differential Voltage Probe
+</center>
+</td>
+<td style="width:50%">
+  
+<center>
+  
+**1**
+</center> 
+    </td>
+  </tr>
+  
+  <tr>
+<td style="width:50%">
+<center>
+Current Probe
+</center>
+</td>
+<td style="width:50%">
+  
+<center>
+  
+**1**
+</center> 
+    </td>
+  </tr>
+</table>
 
