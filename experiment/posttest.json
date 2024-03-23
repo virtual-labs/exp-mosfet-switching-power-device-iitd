@@ -2,12 +2,12 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
-      "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+      "question": "<center>Answer the questions given below (refer Fig.1):<br> <img src='images/pre1.png' height='300px'><br><br>Fig. 1. Circuit configuration of boost converter.</center><br><br> 1. In SCR, the magnitude of latching current (IL) compared to holding current (IH) is:",
+      "answers": {  
+        "a": "Higher",
+        "b": "Lower",
+        "c": "Equal",
+        "d": "Negligible"
       },
       "explanations": {
         "a": "Explanation 1  <a href='www.google.com'>here</a>",
@@ -15,16 +15,17 @@
         "c": "Explanation 2",
         "d": "Explanation 2"
       },
-      "correctAnswer": "a",
+      "correctAnswer": "d",
       "difficulty": "beginner"
     },
+      
     {
-      "question": "This is a Sample Question 2?",
+      "question": "2. The v-i characteristics of SCR is a plot between:",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "Gate voltage (vg)-vs-Anode Current (iA)",
+        "b": "Anode-to-Cathode voltage (vAK)-vs-Anode Current (iA)",
+        "c": "Anode-to-Cathode voltage (vAK)-vs-Gate Current (Ig)",
+        "d": "Gate voltage (vg)-vs-Gate Current (Ig)"
       },
       "explanations": {
         "a": "Explanation 1  <a href='www.google.com'>here</a>",
@@ -34,6 +35,117 @@
       },
       "correctAnswer": "c",
       "difficulty": "beginner"
+    },
+    
+    {
+      
+      "question": "3. The minimum value of anode current (iA) below which the SCR turns-OFF is called the",
+      "answers": {
+        "a": "Peak anode current",
+        "b": "Latching current",
+        "c": "Holding current",
+        "d": "Forward breakover current"
+      },
+      "explanations": {
+        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "b": "Explanation 2",
+        "c": "Explanation 2",
+        "d": "Explanation 2"
+      },
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+        
+    {
+
+      "question": "4. Under forward blocking state, the three junctions of the SCR (J1, J2 and J3) are in which states?",
+      "answers": {
+        "a": "All are forward biased",
+        "b": "All are reverse biased",
+        "c": "‘J1, J3 ‘ are forward biased while ‘J2 ‘ is reverse biased",
+        "d": "‘J1, J2 ‘ are forward biased while ‘J3 ‘ is reverse biased"
+      },
+      "explanations": {
+        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "b": "Explanation 2",
+        "c": "Explanation 2",
+        "d": "Explanation 2"
+      },
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+
+      {
+      "question": "5. A SCR is triggered using a gate current. After sometime the gate signal is stopped. What is the status of SCR?",
+      "answers": {
+        "a": "SCR stops conducting.",
+        "b": "SCR goes into reverse breakdown.",
+        "c": "SCR continues to conduct if anode current is maintained above latching current.",
+        "d": "SCR continues to conduct if anode current is maintained above holding current."
+      },
+      "explanations": {
+        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "b": "Explanation 2",
+        "c": "Explanation 2",
+        "d": "Explanation 2"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+
+      {    
+      "question": "6. Reliable method for firing an SCR is?",
+      "answers": {
+        "a": "High dv/dt",
+        "b": "Continuous gate signal",
+        "c": "Firing pulses",
+        "d": "High di/dt"
+      },
+      "explanations": {
+        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "b": "Explanation 2",
+        "c": "Explanation 2",
+        "d": "Explanation 2"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+
+      {
+      "question": "7. In practice, the correct method of turning-ON a SCR is?",
+      "answers": {
+        "a": "Increasing the anode-to-cathode voltage (vAK ) till it reaches a value equal to or above forward breakover voltage (vBO ).",
+        "b": "The anode-to-cathode voltage (vAK ) is maintained below the breakover voltage (vBO ) and a positive voltage between the gate and cathode (Vg ) is applied across SCR.",
+        "c": "Increasing the anode-to-cathode voltage (vAK ) till the anode current (iA) reaches above holding current (IH ).",
+        "d": "Positive anode-to-cathode voltage (vAK ) automatically turns- ON the SCR."
+      },
+      "explanations": {
+        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "b": "Explanation 2",
+        "c": "Explanation 2",
+        "d": "Explanation 2"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+
+      {
+      "question": "8. How can a conducting SCR be turned-OFF?",
+      "answers": {
+        "a": "By application of negative anode current (iA) or negative anode-to-cathode voltage (vAK).",
+        "b": "By application of negative gate current (Ig).",
+        "c": "By reducing the gate current (Ig) to zero.",
+        "d": "All of the above methods are correct."
+      },
+      "explanations": {
+        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "b": "Explanation 2",
+        "c": "Explanation 2",
+        "d": "Explanation 2"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
     }
+
   ]
 }
