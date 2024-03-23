@@ -72,7 +72,7 @@ Fig. 2. Internal structure of SCR.
 
 **'v-i' Characteristics of the SCR:**
 
-1.	‘v-i ‘ characteristics of a SCR shows the variation between the anode current (iA) against the anode-to-cathode voltage (vAK).<br><br>
+1.	'v-i' characteristics of a SCR shows the variation between the anode current (iA) against the anode-to-cathode voltage (vAK).<br><br>
 2.	The circuit diagram to plot the characteristics is given in Fig. 3.<br>
 
 <center>
@@ -84,7 +84,7 @@ Fig. 3. Circuit to plot v-I characteristics.
 </center>
 <br> 
 
-3.	The ‘v-i’ characteristics of SCR is shown in Fig. 4.
+3.	The 'v-i' characteristics of SCR is shown in Fig. 4.
 
 <center>
 <img src="images/th8.png" height="350px">
@@ -259,7 +259,7 @@ DC-Ammeter
 
 
 **•	Method-2: Using Digital Oscilloscope (DSO)**
-</div>
+
 
 <center>
 <img src="images/th10.png" height="350px">
