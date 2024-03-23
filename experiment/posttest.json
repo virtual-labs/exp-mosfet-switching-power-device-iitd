@@ -58,7 +58,7 @@
         
     {
 
-      "question": "4. Under forward blocking state, the three junctions of the SCR (J1, J2 and J3) are in which states?",
+      "question": "4. Under forward blocking state, the three junctions of the SCR (J1, J2 and J3) are in which states?<br><br><center><img src='images/pos2.png' height='300px'></center><br><br>",
       "answers": {
         "a": "All are forward biased",
         "b": "All are reverse biased",
