@@ -2,7 +2,7 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "<center>Answer the questions given below (refer Fig.1):<br> <img src='images/pre1.png' height='300px'><br><br>Fig. 1. Circuit configuration of boost converter.</center><br><br> 1. In SCR, the magnitude of latching current (IL) compared to holding current (IH) is:",
+      "question": "1. In SCR, the magnitude of latching current (IL) compared to holding current (IH) is:",
       "answers": {  
         "a": "Higher",
         "b": "Lower",
