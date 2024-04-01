@@ -60,24 +60,24 @@ Fig. 2. Internal structure of MOSFET.
 
 4.  Enhancement-type MOSFET works in two modes: ON-state (conducting) and OFF-state (blocking), controlled by the PWM signal given to the Gate terminal.<br>
 
-5.  For gate-to-source voltage more than threshold (VT), Enhancement-type MOSFET conducts. At zero gate voltage, it remains in OFF-state. Hence, it is generally used as switching device in  power converters/ power conversion applications.<br>	  
+5.  For gate-to-source voltage more than threshold (V<sub>T</sub>), Enhancement-type MOSFET conducts. At zero gate voltage, it remains in OFF-state. Hence, it is generally used as switching device in power converters/ power conversion applications.<br>	  
 
 
 **Operating modes of MOSFET switching device:**
 <br>
 
-1.	Forward Blocking State (vDS > 0, vGS = 0): A MOSFET is a voltage controlled device. When Drain-to-Source voltage (vDS ) is positive, both the junctions remain reverse biased. MOSFET doesn’t conduct.
+1.	Forward Blocking State (v<sub>DS</sub> > 0, v<sub>GS</sub> = 0): A MOSFET is a voltage controlled device. When Drain-to-Source voltage (v<sub>DS</sub>) is positive, both the junctions remain reverse biased. MOSFET doesn’t conduct.
 
-2.	Forward Conducting State (vDS > 0, vGS ≥ VT ): When Drain-to-Source voltage (vDS ) is positive, with Gate-to-Source voltage (vGS) more than threshold voltage, the MOSFET starts conducting and hence current flows from drain to source. 
-During forward conduction, the MOSFET will operate in any one of the following states, depending on the values of drain-to-source voltage (VDS) and the Gate voltage (VGS) values: Cut-off region, linear region and Saturation region.<sub>1</sub>
+2.	Forward Conducting State (v<sub>DS</sub> > 0, v<sub>GS</sub> ≥ V<sub>T</sub>): When Drain-to-Source voltage (v<sub>DS</sub>) is positive, with Gate-to-Source voltage (v<sub>GS</sub>) more than threshold voltage, the MOSFET starts conducting and hence current flows from drain to source. 
+During forward conduction, the MOSFET will operate in any one of the following states, depending on the values of drain-to-source voltage (V<sub>DS</sub>) and the Gate voltage (V<sub>GS</sub>) values: Cut-off region, linear region and Saturation region.
   
-3.	Reverse Blocking State (vDS < 0):  When the drain-to-source voltage (VDS) is negative the junctions become reverse biased and MOSFET stops conducting.<br><br>
+3.	Reverse Blocking State (v<sub>DS</sub> < 0):  When the drain-to-source voltage (V<sub>DS</sub>) is negative the junctions become reverse biased and MOSFET stops conducting.<br><br>
 
 **Characteristics of the MOSFET:**
 
 There are two important characteristics defined for an MOSFET:
 
-1.	Output Characteristics: It is the plot between the Drain-to-Source voltage (VDS) and the Drain current (ID) for a fixed Gate-to-Source voltage (VGS). The circuit diagram to plot these characteristics is given in Fig. 3. Voltage ‘VDS’ is measured by the voltmeter while the ammeter measures the current ‘ID’.<br><br>
+1.	Output Characteristics: It is the plot between the Drain-to-Source voltage (V<sub>DS</sub>) and the Drain current (I<sub>D</sub>) for a fixed Gate-to-Source voltage (V<sub>GS</sub>). The circuit diagram to plot these characteristics is given in Fig. 3. Voltage ‘V<sub>DS</sub>’ is measured by the voltmeter while the ammeter measures the current ‘I<sub>D</sub>’.<br><br>
 
 <center>
 <img src="images/th4.png" height="350px">
@@ -101,7 +101,7 @@ Fig. 4. Output characteristics of MOSFET.
 
 MOSFET has three operating regions: Cutoff region, Linear region and Saturation region as shown in Fig. 4.
 
-2.	Transfer Characteristics: It is the plot between the Gate-to-Source voltage (VGS) and the Drain current (ID) for a fixed value of Drain-to-Source voltage (VDS). The circuit diagram to plot the characteristics is given in Fig. 5. Voltage ‘VGS‘ is measured by the voltmeter while the ammeter measures the current ‘ID’.<br>
+2.	Transfer Characteristics: It is the plot between the Gate-to-Source voltage (V<sub>GS</sub>) and the Drain current (I<sub>D</sub>) for a fixed value of Drain-to-Source voltage (V<sub>DS</sub>). The circuit diagram to plot the characteristics is given in Fig. 5. Voltage ‘V<sub>GS</sub>‘ is measured by the voltmeter while the ammeter measures the current ‘I<sub>D</sub>’.<br>
 
 3.	Switching characteristics: It is drain current and drain-to-source voltage profiles when they are turned- ON-to-OFF and OFF-to-ON (during transition).<br>
 
