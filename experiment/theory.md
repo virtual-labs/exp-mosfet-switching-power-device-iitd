@@ -1,9 +1,9 @@
 ### Theory
 
 
-**Representation of SCR:**
+**Representation of MOSFET:**
 
-Fig. 1(a) and 1(b) show the symbolic representation of SCR and a typical SCR package available in market.
+Fig. 1(a) and 1(b) show the symbolic representation of MOSFET and a typical MOSFET package available in market.
 
 <br>
 
@@ -13,9 +13,9 @@ Fig. 1(a) and 1(b) show the symbolic representation of SCR and a typical SCR pac
 <center>
 
 <br>
-<img src="images/th4.png">
+<img src="images/th1.png">
 <br><br>
-Fig. 1(a). Symbolic representation of SCR.
+Fig. 1(a). Symbolic representation of MOSFET
 <br><br>
 </center>
 </td>
@@ -24,9 +24,9 @@ Fig. 1(a). Symbolic representation of SCR.
 <center>
 
 <br>
-<img src="images/th5.png">
+<img src="images/th2.png">
 <br><br>
-Fig. 1(b). A typical SCR package.
+Fig. 1(b). A typical MOSFET package
 <br><br>
 </center> 
     </td>
@@ -37,49 +37,53 @@ Fig. 1(b). A typical SCR package.
 <br>
 <div style="float: left; width:100%;"><br>
   
-**Introduction to SCR:**
+**Introduction to MOSFET:**
 
-Fig. 2 shows the internal structure of a SCR. Some of the key features of SCR are compiled and given below.
+Fig. 2 shows the internal structure of MOSFET. Some of the key features of MOSFET are compiled and given below.
 
 </div>
 
 <center>
-<img src="images/th6.png" height="350px">
+<img src="images/th3.png" height="350px">
 
 <br>
-Fig. 2. Internal structure of SCR.
+Fig. 2. Internal structure of MOSFET.
 <br>
 </center>
 <br>
 
-1.	Silicon-controlled rectifier (SCR) is a semiconductor power device. It is used as a controlled switch in power electronic circuits as bistable switches (ON/ OFF State). In utility dc transmission line applications, series-connected SCRs are employed in It finds wide applications in AC-DC rectifiers, Choppers, AC Voltage controllers, Cycloconverters and Inverters.<br>
+1.	It is a three-terminal majority carrier device. It exhibits high switching speed, low rise and fall time. It is suitable for low-power, high-frequency switching applications such as DC-DC converters.<br>
 
-2.	It has a four layer PNPN structure: Two P-type doped (p) layers, Two N-type doped layers, one is heavy doped (n<sup>+</sup>) and lightly doped (n<sup>-</sup>). It has three junctions: p-n (J<sub>1</sub>), n-p (J<sub>2</sub>) and p-n<sup>+</sup> (J<sub>3</sub>).<br>
-3.	The  SCR has three external terminals namely: Anode (A), Cathode (K) and Gate (G). <br><br>
+2.	It is a voltage-controlled device and the ‘Gate circuit’ requires only a small amount of current for it to start conducting (ON-State).<br>
 
-**Operating modes of SCR:**
+3.	There are two types of MOSFETs: a) Depletion type, b) Enhancement type. Both have three terminals: Drain (D), Source (S) and Gate (G).<br>
+
+4.  Enhancement-type MOSFET works in two modes: ON-state (conducting) and OFF-state (blocking), controlled by the PWM signal given to the Gate terminal.<br>
+
+5.  For gate-to-source voltage more than threshold (VT), Enhancement-type MOSFET conducts. At zero gate voltage, it remains in OFF-state. Hence, it is generally used as switching device in  power converters/ power conversion applications.<br>	  
+
+
+**Operating modes of MOSFET switching device:**
 <br>
 
-1.	Forward Blocking State: When the anode voltage is made more positive with respect to the cathode and the Gate current is zero, the junctions ‘J<sub>1</sub> ‘ and ‘J<sub>3</sub> ‘ are forward biased while ‘J<sub>2</sub> ‘ is reverse biased. Only a small leakage current flows from anode to cathode. The SCR is then said to be in the forward blocking.
+1.	Forward Blocking State (vDS > 0, vGS = 0): A MOSFET is a voltage controlled device. When Drain-to-Source voltage (vDS ) is positive, both the junctions remain reverse biased. MOSFET doesn’t conduct.
 
-2.	Forward Conducting State: If the anode-to-cathode voltage (v<sub>AK</sub>)  is increased to a sufficient value, the reverse-biased junction J<sub>2</sub> breaks down. This is known as avalanche breakdown. All three junctions (J<sub>1</sub>, J<sub>2</sub> and J<sub>3</sub> ) are now forward biased, resulting in flow of current (i<sub>A</sub>). The device is now in conducting state, or ON-state. A minimum anode current known as ‘latching current’ (I<sub>L</sub>) needs to be maintained immediately after the SCR goes to ON- State.
+2.	Forward Conducting State (vDS > 0, vGS ≥ VT ): When Drain-to-Source voltage (vDS ) is positive, with Gate-to-Source voltage (vGS) more than threshold voltage, the MOSFET starts conducting and hence current flows from drain to source. 
+During forward conduction, the MOSFET will operate in any one of the following states, depending on the values of drain-to-source voltage (VDS) and the Gate voltage (VGS) values: Cut-off region, linear region and Saturation region.<sub>1</sub>
   
-3.	Once the SCR starts conducting, gate loses control over the device. It continues conducting even after gate signal is removed. However, if the forward anode current (I<sub>A</sub>) is reduced below a level known as the ‘holding current’ (I<sub>H</sub>), the SCR goes to blocking state. The holding current is less than the latching current.
+3.	Reverse Blocking State (vDS < 0):  When the drain-to-source voltage (VDS) is negative the junctions become reverse biased and MOSFET stops conducting.<br><br>
 
-4.	Reverse Blocking State:  When the cathode voltage is more positive with respect to the anode, the junctions 'J<sub>1</sub>' and 'J<sub>3</sub>' are reverse biased while junction 'J<sub>2</sub> is forward biased. No current flows from anode-to-cathode and hence the SCR is in reverse blocking state or OFF- State.<br><br>
+**Characteristics of the MOSFET:**
 
+There are two important characteristics defined for an MOSFET:
 
-
-**'v-i' Characteristics of the SCR:**
-
-1.	'v-i' characteristics of a SCR shows the variation between the anode current (i<sub>A</sub>) against the anode-to-cathode voltage (v<sub>AK</sub>).<br><br>
-2.	The circuit diagram to plot the characteristics is given in Fig. 3.<br>
+1.	Output Characteristics: It is the plot between the Drain-to-Source voltage (VDS) and the Drain current (ID) for a fixed Gate-to-Source voltage (VGS). The circuit diagram to plot these characteristics is given in Fig. 3. Voltage ‘VDS’ is measured by the voltmeter while the ammeter measures the current ‘ID’.<br><br>
 
 <center>
-<img src="images/th7.png" height="350px">
+<img src="images/th4.png" height="350px">
 
 <br>
-Fig. 3. Circuit to plot v-I characteristics.
+Fig. 3. Circuit diagram for output characteristics.
 <br>
 </center>
 <br> 
@@ -87,7 +91,7 @@ Fig. 3. Circuit to plot v-I characteristics.
 3.	The 'v-i' characteristics of SCR is shown in Fig. 4.
 
 <center>
-<img src="images/th8.png" height="350px">
+<img src="images/th5.png" height="350px">
 
 <br>
 Fig. 4. v-i  characteristics of SCR.
@@ -112,7 +116,7 @@ The v-i characteristics of SCR can be obtained using the circuit diagram given i
 </div>
 
 <center>
-<img src="images/th9.png" height="350px">
+<img src="images/th6.png" height="350px">
 
 <br>
 Fig. 5. Circuit Diagram using meters.
@@ -262,7 +266,7 @@ DC-Ammeter
 
 
 <center>
-<img src="images/th10.png" height="350px">
+<img src="images/th7.png" height="350px">
 
 <br>
 Fig. 6. Circuit Diagram using probes.
