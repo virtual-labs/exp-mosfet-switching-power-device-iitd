@@ -2,12 +2,13 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "1. In SCR, the magnitude of latching current (I<sub>L</sub>) compared to holding current (I<sub>H</sub>) is:",
+
+      "question": "1. Which of the following is true for MOSFET:",
       "answers": {  
-        "a": "Higher",
-        "b": "Lower",
-        "c": "Equal",
-        "d": "Negligible"
+        "a": "It is a majority carrier device",
+        "b": "It is a minority carrier device",
+        "c": "It is a four-layer device",
+        "d": "Its lightly doped n-region is connected to its collector"
       },
       "explanations": {
         "a": "Explanation 1  <a href='www.google.com'>here</a>",
@@ -20,12 +21,13 @@
     },
       
     {
-      "question": "2. The v-i characteristics of SCR is a plot between:",
+
+      "question": "2. The output characteristics of MOSFET is a plot between:",
       "answers": {
-        "a": "Gate voltage (v<sub>g</sub>)-vs-Anode Current (i<sub>A</sub>)",
-        "b": "Anode-to-Cathode voltage (v<sub>AK</sub>)-vs-Anode Current (i<sub>A</sub>)",
-        "c": "Anode-to-Cathode voltage (v<sub>AK</sub>)-vs-Gate Current (I<sub>g</sub>)",
-        "d": "Gate voltage (v<sub>g</sub>)-vs-Gate Current (I<sub>g</sub>)"
+        "a": "Gate-to-Source voltage (V<sub>GS</sub>)-vs-Drain Current (I<sub>D</sub>)",
+        "b": "Drain-to-Source voltage (V<sub>DS</sub>)-vs-Drain Current (I<sub>D</sub>)",
+        "c": "Gate-to-Source voltage (V<sub>GS</sub>)-vs-Drain-to-Source voltage (V<sub>DS</sub>)",
+        "d": "Drain-to-Source voltage (V<sub>DS</sub>)-vs-Gate Current (I<sub>G</sub>)"
       },
       "explanations": {
         "a": "Explanation 1  <a href='www.google.com'>here</a>",
@@ -38,13 +40,13 @@
     },
     
     {
-      
-      "question": "3. The minimum value of anode current (i<sub>A</sub>) below which the SCR turns-OFF is called the",
+
+      "question": "3. In MOSFET, it is observed that even with increasing drain-to-source voltage (V<sub>DS</sub>) the drain current (I<sub>D</sub>) is negligible. Which region is the MOSFET operating in?",
       "answers": {
-        "a": "Peak anode current",
-        "b": "Latching current",
-        "c": "Holding current",
-        "d": "Forward breakover current"
+        "a": "Saturation",
+        "b": "Linear",
+        "c": "Cutoff",
+        "d": "Reverse blocking"
       },
       "explanations": {
         "a": "Explanation 1  <a href='www.google.com'>here</a>",
@@ -58,12 +60,12 @@
         
     {
 
-      "question": "4. Under forward blocking state, the three junctions of the SCR (J<sub>1</sub>, J<sub>2</sub> and J<sub>3</sub>) are in which states?<br><center><img src='images/pos2.png' height='300px'></center><br>",
+      "question": "4. When compared to IGBT the time required to turn-OFF a MOSFET is?",
       "answers": {
-        "a": "All are forward biased",
-        "b": "All are reverse biased",
-        "c": "'J<sub>1</sub>, J<sub>3</sub>' are forward biased while 'J<sub>2</sub>' is reverse biased",
-        "d": "'J<sub>1</sub>, J<sub>2</sub>' are forward biased while 'J<sub>3</sub>' is reverse biased"
+        "a": "Almost equal",
+        "b": "Higher",
+        "c": "Lower",
+        "d": "Double"
       },
       "explanations": {
         "a": "Explanation 1  <a href='www.google.com'>here</a>",
@@ -76,12 +78,13 @@
     },
 
       {
-      "question": "5. A SCR is triggered using a gate current. After sometime the gate signal is stopped. What is the status of SCR?",
+
+      "question": "5. A positive DC voltage is applied across the drain-to-source of a MOSFET. A sufficiently high gate signal is then applied. The MOSFET will be in which state?",
       "answers": {
-        "a": "SCR stops conducting.",
-        "b": "SCR goes into reverse breakdown.",
-        "c": "SCR continues to conduct if anode current is maintained above latching current.",
-        "d": "SCR continues to conduct if anode current is maintained above holding current."
+        "a": "MOSFET doesn’t conduct (Reverse blocking state).",
+        "b": "MOSFET conducts (Reverse breakdown).",
+        "c": "MOSFET doesn’t conduct (Forward blocking state).",
+        "d": "MOSFET starts conducting (Forward conducting state)."
       },
       "explanations": {
         "a": "Explanation 1  <a href='www.google.com'>here</a>",
@@ -93,13 +96,14 @@
       "difficulty": "beginner"
     },
 
-      {    
-      "question": "6. Reliable method for firing an SCR is?",
+      { 
+
+      "question": "6. A forward biased MOSFET comes into ON-state by?",
       "answers": {
-        "a": "High dv/dt",
-        "b": "Continuous gate signal",
-        "c": "Firing pulses",
-        "d": "High di/dt"
+        "a": "Allowing Drain current (I<sub>D</sub>)",
+        "b": "Applying Drain-to-Source voltage (V<sub>DS</sub>)",
+        "c": "Applying Gate-to-Source voltage (V<sub>GS</sub>)",
+        "d": "Allowing Gate current (I<sub>G</sub>)"
       },
       "explanations": {
         "a": "Explanation 1  <a href='www.google.com'>here</a>",
@@ -112,12 +116,13 @@
     },
 
       {
-      "question": "7. In practice, the correct method of turning-ON a SCR is?",
+
+      "question": "7. In comparison to IGBT the losses in MOSFET are?",
       "answers": {
-        "a": "Increasing the anode-to-cathode voltage (v<sub>AK</sub>) till it reaches a value equal to or above forward breakover voltage (v<sub>BO</sub>).",
-        "b": "The anode-to-cathode voltage (v<sub>AK</sub>) is maintained below the breakover voltage (v<sub>BO</sub>) and a positive voltage between the gate and cathode (V<sub>g</sub>) is applied across SCR.",
-        "c": "Increasing the anode-to-cathode voltage (v<sub>AK</sub>) till the anode current (i<sub>A</sub>) reaches above holding current (I<sub>H</sub>).",
-        "d": "Positive anode-to-cathode voltage (v<sub>AK</sub>) automatically turns- ON the SCR."
+        "a": "Lower",
+        "b": "Higher",
+        "c": "Almost equal",
+        "d": "Half"
       },
       "explanations": {
         "a": "Explanation 1  <a href='www.google.com'>here</a>",
@@ -130,12 +135,13 @@
     },
 
       {
-      "question": "8. How can a conducting SCR be turned-OFF?",
+
+      "question": "8. The linear region of a MOSFET is also called as?",
       "answers": {
-        "a": "By application of negative anode current (i<sub>A</sub>) or negative anode-to-cathode voltage (v<sub>AK</sub>).",
-        "b": "By application of negative gate current (I<sub>g</sub>).",
-        "c": "By reducing the gate current (I<sub>g</sub>) to zero.",
-        "d": "All of the above methods are correct."
+        "a": "Saturation region",
+        "b": "Breakover region",
+        "c": "Inductive region",
+        "d": "Ohmic region"
       },
       "explanations": {
         "a": "Explanation 1  <a href='www.google.com'>here</a>",
