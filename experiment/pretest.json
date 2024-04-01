@@ -2,12 +2,13 @@
   "version": 2.0,
   "questions": [
     {    
+
       "question": "1. Select the false statement:",
       "answers": {  
-        "a": "SCR has three terminals: anode, cathode and gate.",
-        "b": "SCR is a four-layer semiconductor device.",
-        "c": "SCR allows current in either directions.",
-        "d": "SCR has three junctions."
+        "a": "MOSFET has three terminals: Drain, Source and Gate.",
+        "b": "MOSFET is a three-layer semiconductor device.",
+        "c": "MOSFET has four junctions.",
+        "d": "MOSFET is a voltage controlled device."
       },
       "explanations": {
         "a": "Explanation 1  <a href='www.google.com'>here</a>",
@@ -21,12 +22,12 @@
       
     {
 
-      "question": "2. SCR has a:",
+      "question": "2. Which of the following devices is suitable for high frequency switching applications?",
       "answers": {
-        "a": "PNPN structure",
-        "b": "PNP structure",
-        "c": "NPNP structure",
-        "d": "NPN structure"
+        "a": "SCR",
+        "b": "TRIAC",
+        "c": "MOSFET ",
+        "d": "IGBT"
       },
       "explanations": {
         "a": "Explanation 1  <a href='www.google.com'>here</a>",
@@ -34,18 +35,18 @@
         "c": "Explanation 2",
         "d": "Explanation 2"
       },
-      "correctAnswer": "a",
+      "correctAnswer": "c",
       "difficulty": "beginner"
     },
     
     {
 
-      "question": "3. Identify the three terminals of SCR- anode (A), cathode (K) and gate (G) in the SCR figure given below from left-to-right.<br><center><img src='images/pre2.png' height='300px'></center><br>",
+      "question": "3. Identify the three terminals of MOSFET- drain (D), source (S) and gate (G) in the figure given below from left-to-right.<br><center><img src='images/pr1.png' height='300px'></center><br>",
       "answers": {
-        "a": "(i)- cathode, (ii)- anode, (iii)- gate",
-        "b": "(i)- anode, (ii)- cathode, (iii)- gate",
-        "c": "(i)- gate, (ii)- anode, (iii)- cathode",
-        "d": "(i)- gate, (ii)- cathode, (iii)- anode"
+        "a": "(i)- gate, (ii)- drain, (iii)- source",
+        "b": "(i)- source, (ii)- drain, (iii)- gate",
+        "c": "(i)- gate, (ii)- source, (iii)- drain",
+        "d": "(i)- drain, (ii)- source, (iii)- gate"
       },
       "explanations": {
         "a": "Explanation 1  <a href='www.google.com'>here</a>",
@@ -58,12 +59,13 @@
     },
         
     {
-      "question": "4. In order to trigger or turn- ON a SCR, the potential difference between anode-to-cathode must be:",
+
+      "question": "4. Which of the following statements is correct?",
       "answers": {
-        "a": "Positive",
-        "b": "Negative",
-        "c": "Zero",
-        "d": "Equal to gate-to-cathode voltage"
+        "a": "MOSFET is a voltage controlled device",
+        "b": "Switching speed of IGBT is faster than MOSFET",
+        "c": "MOSFET is a current controlled device",
+        "d": "MOSFET is suitable for line frequency AC-DC rectifiers"
       },
       "explanations": {
         "a": "Explanation 1  <a href='www.google.com'>here</a>",
@@ -76,12 +78,13 @@
     },
 
       {
-      "question": "5. Which of the following statements differentiate the SCR from a diode?",
+
+      "question": "5. Which of the following is the correct for MOSFET from application point of view?",
       "answers": {
-        "a": "It blocks current when reverse biased.",
-        "b": "It conducts when forward biased at a given gate signal.",
-        "c": "It conducts when forward biased without any gate signal.",
-        "d": "It conducts when reverse biased at a given gate signal."
+        "a": "High power, high frequency",
+        "b": "Low power, high frequency",
+        "c": "Low power, low frequency",
+        "d": "High power, low frequency"
       },
       "explanations": {
         "a": "Explanation 1  <a href='www.google.com'>here</a>",
@@ -92,50 +95,14 @@
       "correctAnswer": "b",
       "difficulty": "beginner"
     },
-	 
+   
       {    
-      "question": "6. The correct symbolic representation of an SCR is?",
+      "question": "6. The correct symbolic representation of an MOSFET is?",
       "answers": {
-        "a": "<img src='images/pre3.png' height='70px'>",
-        "b": "<img src='images/pre4.png' height='70px'>",
-        "c": "<img src='images/pre5.png' height='70px'>",
-        "d": "<img src='images/pre6.png' height='70px'>"
-      },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
-      },
-      "correctAnswer": "d",
-      "difficulty": "beginner"
-    },
-
-      {
-      "question": "7. Choose the correct statement.",
-      "answers": {
-        "a": "SCR is a fully controlled device.",
-        "b": "SCR is a semi-controlled device.",
-        "c": "SCR is a uncontrolled device.",
-        "d": "All the above statements are false."
-      },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
-      },
-      "correctAnswer": "b",
-      "difficulty": "beginner"
-    },
-
-      {
-      "question": "8. SCR is capable of blocking:",
-      "answers": {
-        "a": "neither positive nor negative anode-to-cathode voltages.",
-        "b": "only positive anode-to-cathode voltages.",
-        "c": "only negative anode-to-cathode voltages.",
-        "d": "both positive and negative anode-to-cathode voltages."
+        "a": "<img src='images/pr2.png' height='70px'>",
+        "b": "<img src='images/pr3.png' height='70px'>",
+        "c": "<img src='images/pr4.png' height='70px'>",
+        "d": "<img src='images/pr5.png' height='70px'>"
       },
       "explanations": {
         "a": "Explanation 1  <a href='www.google.com'>here</a>",
