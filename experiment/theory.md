@@ -88,16 +88,18 @@ Fig. 3. Circuit diagram for output characteristics.
 </center>
 <br> 
 
-3.	The 'v-i' characteristics of SCR is shown in Fig. 4.
+The output characteristics of MOSFET is shown in Fig. 4.
 
 <center>
 <img src="images/th5.png" height="350px">
 
 <br>
-Fig. 4. v-i  characteristics of SCR.
+Fig. 4. Output characteristics of MOSFET.
 <br>
 </center>
 <br> 
+
+MOSFET has three operating regions: Cutoff region, Linear region and Saturation region as shown in Fig. 4.
 
 4.	SCR has three operating modes: Forward Blocking, Forward Conduction and Reverse Blocking as shown in Fig. 4. 'I<sub>H</sub>' is the holding current and 'I<sub>L</sub>' is the latching current. The Forward breakover voltages 'V<sub>BO1</sub> , V<sub>BO2</sub> and V<sub>BO3</sub>' (V<sub>BO1</sub> <V<sub>BO2</sub> <V<sub>BO3</sub>) correspond to the Gate currents 'I<sub>g1</sub>, I<sub>g2</sub>  and I<sub>g3</sub>'  (I<sub>g1</sub> > I<sub>g2</sub> > I<sub>g3</sub>) respectively.
 
