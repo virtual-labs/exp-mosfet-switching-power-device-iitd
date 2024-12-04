@@ -1,81 +1,74 @@
 
      <img
         class="main-window-imgs"
-        src="./src/images/part_1_1_instruction.png"
+        src="./src/images/new/btn_1.png"
     />
     
      <img
         class="main-window-imgs"
-        src="./src/images/part_1_1_nomenclature.png"
+        src="./src/images/new/btn_2.png"
     />
     
      <img
         class="main-window-imgs"
-        src="./src/images/part_1_1_procedure.png"
+        src="./src/images/new/btn_click.png"
     />
     
      <img
         class="main-window-imgs"
-        src="./src/images/part_1_2_instruction.png"
+        src="./src/images/new/circle.png"
     />
     
      <img
         class="main-window-imgs"
-        src="./src/images/part_1_2_nomenclature.png"
+        src="./src/images/new/frame_1.png"
     />
     
      <img
         class="main-window-imgs"
-        src="./src/images/part_1_2_procedure.png"
+        src="./src/images/new/frame_2.png"
     />
     
      <img
         class="main-window-imgs"
-        src="./src/images/part_2_instruction.png"
+        src="./src/images/new/frame_3.png"
     />
     
      <img
         class="main-window-imgs"
-        src="./src/images/part_2_nomenclature.png"
+        src="./src/images/new/menu_page.png"
     />
     
      <img
         class="main-window-imgs"
-        src="./src/images/part_2_procedure.png"
+        src="./src/images/new/val_vgs.png"
     />
     
      <img
         class="main-window-imgs"
-        src="./src/images/part_3_nomenclature.png"
-    />
-    
-     <img
-        class="main-window-imgs"
-        src="./src/images/part_3_procedure.png"
+        src="./src/images/new/val_vin.png"
     />
     
 
-part_1_1_instruction:this.allImgsDom[index++],
-part_1_1_nomenclature:this.allImgsDom[index++],
-part_1_1_procedure:this.allImgsDom[index++],
-part_1_2_instruction:this.allImgsDom[index++],
-part_1_2_nomenclature:this.allImgsDom[index++],
-part_1_2_procedure:this.allImgsDom[index++],
-part_2_instruction:this.allImgsDom[index++],
-part_2_nomenclature:this.allImgsDom[index++],
-part_2_procedure:this.allImgsDom[index++],
-part_3_nomenclature:this.allImgsDom[index++],
-part_3_procedure:this.allImgsDom[index++],
+btn_1:this.allImgsDom[index++],
+btn_2:this.allImgsDom[index++],
+btn_click:this.allImgsDom[index++],
+circle:this.allImgsDom[index++],
+frame_1:this.allImgsDom[index++],
+frame_2:this.allImgsDom[index++],
+frame_3:this.allImgsDom[index++],
+menu_page:this.allImgsDom[index++],
+val_vgs:this.allImgsDom[index++],
+val_vin:this.allImgsDom[index++],
 
 
-part_1_1_instruction : new Dom("part_1_1_instruction"),
-part_1_1_nomenclature : new Dom("part_1_1_nomenclature"),
-part_1_1_procedure : new Dom("part_1_1_procedure"),
-part_1_2_instruction : new Dom("part_1_2_instruction"),
-part_1_2_nomenclature : new Dom("part_1_2_nomenclature"),
-part_1_2_procedure : new Dom("part_1_2_procedure"),
-part_2_instruction : new Dom("part_2_instruction"),
-part_2_nomenclature : new Dom("part_2_nomenclature"),
-part_2_procedure : new Dom("part_2_procedure"),
-part_3_nomenclature : new Dom("part_3_nomenclature"),
-part_3_procedure : new Dom("part_3_procedure"),
+btn_1 : new Dom("btn_1"),
+btn_2 : new Dom("btn_2"),
+btn_click : new Dom("btn_click"),
+circle : new Dom("circle"),
+frame_1 : new Dom("frame_1"),
+frame_2 : new Dom("frame_2"),
+frame_3 : new Dom("frame_3"),
+menu_page : new Dom("menu_page"),
+val_vgs : new Dom("val_vgs"),
+val_vin : new Dom("val_vin"),
