@@ -11,10 +11,10 @@
         "d": "MOSFET is a voltage controlled device."
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "a": "Explanation 1",
         "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "c": "Explanation 3: IGBT exhibits tail current.",
+        "d": "Explanation 4"
       },
       "correctAnswer": "c",
       "difficulty": "beginner"
@@ -30,10 +30,10 @@
         "d": "IGBT"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "a": "Explanation 1",
         "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "c": "Explanation 3: MOSFET is a ‘fast’ device and is capable of operating at high switching frequencies.",
+        "d": "Explanation 4"
       },
       "correctAnswer": "c",
       "difficulty": "beginner"
@@ -49,10 +49,10 @@
         "d": "(i)- drain, (ii)- source, (iii)- gate"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "a": "Explanation 1: Standard nomenclature adopted.",
         "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "c": "Explanation 3",
+        "d": "Explanation 4"
       },
       "correctAnswer": "a",
       "difficulty": "beginner"
@@ -68,10 +68,10 @@
         "d": "MOSFET is suitable for line frequency AC-DC rectifiers"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "a": "Explanation 1: MOSFET is turned- ON/ OFF by applying or removing gate-to-source voltage. Hence, it is a voltage controlled device. Also compared to MOSFET, IGBT switching frequency is low.",
         "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "c": "Explanation 3",
+        "d": "Explanation 4"
       },
       "correctAnswer": "a",
       "difficulty": "beginner"
@@ -87,10 +87,10 @@
         "d": "High power, low frequency"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "Explanation 1",
+        "b": "Explanation 2: Usually, MOSFET is used for high frequency switching and also handles lower power levels compared to IGBT.",
+        "c": "Explanation 3",
+        "d": "Explanation 4"
       },
       "correctAnswer": "b",
       "difficulty": "beginner"
@@ -105,10 +105,46 @@
         "d": "<img src='images/pr5.png' height='70px'>"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "a": "Explanation 1",
         "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "c": "Explanation 3",
+        "d": "Explanation 4: Standard circuit symbol."
+      },
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+   
+      {    
+      "question": "7. Choose the correct statement.",
+      "answers": {
+        "a": "MOSFET is a current controlled device.",
+        "b": "MOSFET is a voltage controlled device.",
+        "c": "MOSFET is an uncontrolled device.",
+        "d": "MOSFET is a semi-controlled device."
+      },
+      "explanations": {
+        "a": "Explanation 1",
+        "b": "Explanation 2: MOSFET is turned- ON/ OFF by applying or removing gate-to-source voltage. Hence, it is a voltage controlled device.",
+        "c": "Explanation 3",
+        "d": "Explanation 4"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+   
+      {    
+      "question": "8. MOSFET is capable of blocking:",
+      "answers": {
+        "a": "neither positive nor negative drain-to-source voltages.",
+        "b": "only positive drain-to-source voltages.",
+        "c": "only negative drain-to-source voltages.",
+        "d": "both positive and negative drain-to-source voltages."
+      },
+      "explanations": {
+        "a": "Explanation 1",
+        "b": "Explanation 2",
+        "c": "Explanation 3",
+        "d": "Explanation 4: In forward blocking state, MOSFET blocks positive drain-to-source voltage while in reverse blocking mode, it blocks negative voltage."
       },
       "correctAnswer": "d",
       "difficulty": "beginner"
