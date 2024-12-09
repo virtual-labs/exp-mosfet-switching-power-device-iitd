@@ -7,7 +7,7 @@
       "answers": {  
         "a": "MOSFET has three terminals: Drain, Source and Gate.",
         "b": "MOSFET is a three-layer semiconductor device.",
-        "c": "MOSFET has four junctions.",
+        "c": "MOSFET exhibits tail current.",  
         "d": "MOSFET is a voltage controlled device."
       },
       "explanations": {
