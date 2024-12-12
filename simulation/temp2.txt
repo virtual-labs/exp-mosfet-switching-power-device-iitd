@@ -1,0 +1,74 @@
+
+     <img
+        class="main-window-imgs"
+        src="./src/images/new/btn_1.png"
+    />
+    
+     <img
+        class="main-window-imgs"
+        src="./src/images/new/btn_2.png"
+    />
+    
+     <img
+        class="main-window-imgs"
+        src="./src/images/new/btn_click.png"
+    />
+    
+     <img
+        class="main-window-imgs"
+        src="./src/images/new/circle.png"
+    />
+    
+     <img
+        class="main-window-imgs"
+        src="./src/images/new/frame_1.png"
+    />
+    
+     <img
+        class="main-window-imgs"
+        src="./src/images/new/frame_2.png"
+    />
+    
+     <img
+        class="main-window-imgs"
+        src="./src/images/new/frame_3.png"
+    />
+    
+     <img
+        class="main-window-imgs"
+        src="./src/images/new/menu_page.png"
+    />
+    
+     <img
+        class="main-window-imgs"
+        src="./src/images/new/val_vgs.png"
+    />
+    
+     <img
+        class="main-window-imgs"
+        src="./src/images/new/val_vin.png"
+    />
+    
+
+btn_1:this.allImgsDom[index++],
+btn_2:this.allImgsDom[index++],
+btn_click:this.allImgsDom[index++],
+circle:this.allImgsDom[index++],
+frame_1:this.allImgsDom[index++],
+frame_2:this.allImgsDom[index++],
+frame_3:this.allImgsDom[index++],
+menu_page:this.allImgsDom[index++],
+val_vgs:this.allImgsDom[index++],
+val_vin:this.allImgsDom[index++],
+
+
+btn_1 : new Dom("btn_1"),
+btn_2 : new Dom("btn_2"),
+btn_click : new Dom("btn_click"),
+circle : new Dom("circle"),
+frame_1 : new Dom("frame_1"),
+frame_2 : new Dom("frame_2"),
+frame_3 : new Dom("frame_3"),
+menu_page : new Dom("menu_page"),
+val_vgs : new Dom("val_vgs"),
+val_vin : new Dom("val_vin"),

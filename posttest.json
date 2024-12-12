@@ -1,0 +1,157 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+
+      "question": "1. Which of the following is true for MOSFET:",
+      "answers": {  
+        "a": "It is a majority carrier device",
+        "b": "It is a minority carrier device",
+        "c": "It is a four-layer device",
+        "d": "Its lightly doped n-region is connected to its collector"
+      },
+      "explanations": {
+        "a": "Explanation 1: MOSFET is a majority carrier device as it operates mainly on the principle of controlling the flow of majority carriers (electrons).",
+        "b": "Explanation 2",
+        "c": "Explanation 3",
+        "d": "Explanation 4"
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+      
+    {
+
+      "question": "2. The output characteristics of MOSFET is a plot between:",
+      "answers": {
+        "a": "Gate-to-Source voltage (V<sub>GS</sub>)-vs-Drain Current (I<sub>D</sub>)",
+        "b": "Drain-to-Source voltage (V<sub>DS</sub>)-vs-Drain Current (I<sub>D</sub>)",
+        "c": "Gate-to-Source voltage (V<sub>GS</sub>)-vs-Drain-to-Source voltage (V<sub>DS</sub>)",
+        "d": "Drain-to-Source voltage (V<sub>DS</sub>)-vs-Gate Current (I<sub>G</sub>)"
+      },
+      "explanations": {
+        "a": "Explanation 1",
+        "b": "Explanation 2: Output characteristics of MOSFET shows the relation between the drain-to-source voltage and the drain current.",
+        "c": "Explanation 3",
+        "d": "Explanation 4"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    
+    {
+
+      "question": "3. In MOSFET, it is observed that even with increasing drain-to-source voltage (V<sub>DS</sub>) the drain current (I<sub>D</sub>) is negligible. Which region is the MOSFET operating in?",
+      "answers": {
+        "a": "Saturation",
+        "b": "Linear",
+        "c": "Cutoff",
+        "d": "Reverse blocking"
+      },
+      "explanations": {
+        "a": "Explanation 1",
+        "b": "Explanation 2",
+        "c": "Explanation 3: If MOSFET is forward biased but the gate-to-source voltage applied is below the threshold value then no drain current will flow. MOSEFT here is in cutoff region.",
+        "d": "Explanation 4"
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+        
+    {
+
+      "question": "4. When compared to IGBT the time required to turn-OFF a MOSFET is?",
+      "answers": {
+        "a": "Almost equal",
+        "b": "Higher",
+        "c": "Lower",
+        "d": "Double"
+      },
+      "explanations": {
+        "a": "Explanation 1",
+        "b": "Explanation 2",
+        "c": "Explanation 3: MOSFET is fast and used in high frequency switching. Its switching time is lower compared to other devices (IGBT).",
+        "d": "Explanation 4"
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+
+      {
+
+      "question": "5. A positive DC voltage is applied across the drain-to-source of a MOSFET. A sufficiently high gate signal is then applied. The MOSFET will be in which state?",
+      "answers": {
+        "a": "MOSFET doesn’t conduct (Reverse blocking state).",
+        "b": "MOSFET conducts (Reverse breakdown).",
+        "c": "MOSFET doesn’t conduct (Forward blocking state).",
+        "d": "MOSFET starts conducting (Forward conducting state)."
+      },
+      "explanations": {
+        "a": "Explanation 1",
+        "b": "Explanation 2",
+        "c": "Explanation 3",
+        "d": "Explanation 4: When MOSFET is forward biased and a positive gate-to-source voltage above threshold value is applied it is in forward conducting state."
+      },
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+
+      { 
+
+      "question": "6. A forward biased MOSFET comes into ON-state by?",
+      "answers": {
+        "a": "Allowing Drain current (I<sub>D</sub>)",
+        "b": "Applying Drain-to-Source voltage (V<sub>DS</sub>)",
+        "c": "Applying Gate-to-Source voltage (V<sub>GS</sub>)",
+        "d": "Allowing Gate current (I<sub>G</sub>)"
+      },
+      "explanations": {
+        "a": "Explanation 1",
+        "b": "Explanation 2",
+        "c": "Explanation 3: A forward biased MOSFET conducts when a positive gate-to-source voltage above threshold value is applied.",
+        "d": "Explanation 4"
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+
+      {
+
+      "question": "7. In comparison to IGBT the losses in MOSFET are?",
+      "answers": {
+        "a": "Lower",
+        "b": "Higher",
+        "c": "Almost equal",
+        "d": "Half"
+      },
+      "explanations": {
+        "a": "Explanation 1",
+        "b": "Explanation 2: Conduction losses in the MOSFET is higher compared to IGBT due to high ON-state resistance.",
+        "c": "Explanation 3",
+        "d": "Explanation 4"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+
+      {
+
+      "question": "8. The linear region of a MOSFET is also called as?",
+      "answers": {
+        "a": "Saturation region",
+        "b": "Breakover region",
+        "c": "Inductive region",
+        "d": "Ohmic region: "
+      },
+      "explanations": {
+        "a": "Explanation 1",
+        "b": "Explanation 2",
+        "c": "Explanation 3",
+        "d": "Explanation 4: From the output characteristics, it is in “Ohmic region”. "
+      },
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    }
+
+  ]
+}

@@ -1,0 +1,136 @@
+### Theory
+
+
+**Representation of MOSFET:**
+
+Fig. 1(a) and 1(b) show the symbolic representation of MOSFET and a typical MOSFET package available in market.
+
+<br>
+
+<table border="0" align="center" style="width:100%; border:none;">
+  <tr>
+<td style="width:50%">
+<center>
+
+<br>
+<img src="images/th1.png">
+<br><br>
+Fig. 1(a). Symbolic representation of MOSFET
+<br><br>
+</center>
+</td>
+<td style="width:50%">
+  
+<center>
+
+<br>
+<img src="images/th2.png">
+<br><br>
+Fig. 1(b). A typical MOSFET package
+<br><br>
+</center> 
+    </td>
+  </tr>
+</table>
+<br>
+
+<br>
+<div style="float: left; width:100%;"><br>
+  
+**Introduction to MOSFET:**
+
+Fig. 2 shows the internal structure of MOSFET. Some of the key features of MOSFET are compiled and given below.
+
+</div>
+
+<center>
+<img src="images/th3.png" height="350px">
+
+<br>
+Fig. 2. Internal structure of MOSFET.
+<br>
+</center>
+<br>
+
+1.	It is a three-terminal majority carrier device. It exhibits high switching speed, low rise and fall time. It is suitable for low-power, high-frequency switching applications such as DC-DC converters.<br>
+
+2.	It is a voltage-controlled device and the ‘Gate circuit’ requires only a small amount of current for it to start conducting (ON-State).<br>
+
+3.	There are two types of MOSFETs: a) Depletion type, b) Enhancement type. Both have three terminals: Drain (D), Source (S) and Gate (G).<br>
+
+4.  Enhancement-type MOSFET works in two modes: ON-state (conducting) and OFF-state (blocking), controlled by the PWM signal given to the Gate terminal.<br>
+
+5.  For gate-to-source voltage more than threshold (V<sub>T</sub>), Enhancement-type MOSFET conducts. At zero gate voltage, it remains in OFF-state. Hence, it is generally used as switching device in power converters/ power conversion applications.<br>	  
+
+
+**Operating modes of MOSFET switching device:**
+<br>
+
+1.	Forward Blocking State (v<sub>DS</sub> > 0, v<sub>GS</sub> = 0): A MOSFET is a voltage controlled device. When Drain-to-Source voltage (v<sub>DS</sub>) is positive, both the junctions remain reverse biased. MOSFET doesn’t conduct.
+
+2.	Forward Conducting State (v<sub>DS</sub> > 0, v<sub>GS</sub> ≥ V<sub>T</sub>): When Drain-to-Source voltage (v<sub>DS</sub>) is positive, with Gate-to-Source voltage (v<sub>GS</sub>) more than threshold voltage, the MOSFET starts conducting and hence current flows from drain to source. 
+During forward conduction, the MOSFET will operate in any one of the following states, depending on the values of drain-to-source voltage (V<sub>DS</sub>) and the Gate voltage (V<sub>GS</sub>) values: Cut-off region, linear region and Saturation region.
+  
+3.	Reverse Blocking State (v<sub>DS</sub> < 0):  When the drain-to-source voltage (V<sub>DS</sub>) is negative the junctions become reverse biased and MOSFET stops conducting.<br><br>
+
+**Characteristics of the MOSFET:**
+
+There are two important characteristics defined for an MOSFET:
+
+1.	Output Characteristics: It is the plot between the Drain-to-Source voltage (V<sub>DS</sub>) and the Drain current (I<sub>D</sub>) for a fixed Gate-to-Source voltage (V<sub>GS</sub>). The circuit diagram to plot these characteristics is given in Fig. 3. Voltage ‘V<sub>DS</sub>’ is measured by the voltmeter while the ammeter measures the current ‘I<sub>D</sub>’.<br><br>
+
+<center>
+<img src="images/th4.png" height="350px">
+
+<br>
+Fig. 3. Circuit diagram for output characteristics.
+<br>
+</center>
+<br> 
+
+The output characteristics of MOSFET is shown in Fig. 4.
+
+<center>
+<img src="images/th5.png" height="350px">
+
+<br>
+Fig. 4. Output characteristics of MOSFET.
+<br>
+</center>
+<br> 
+
+MOSFET has three operating regions: Cutoff region, Linear region and Saturation region as shown in Fig. 4.
+
+2.	Transfer Characteristics: It is the plot between the Gate-to-Source voltage (V<sub>GS</sub>) and the Drain current (I<sub>D</sub>) for a fixed value of Drain-to-Source voltage (V<sub>DS</sub>). The circuit diagram to plot the characteristics is given in Fig. 5. Voltage ‘V<sub>GS</sub>‘ is measured by the voltmeter while the ammeter measures the current ‘I<sub>D</sub>’.<br>
+
+3.	Switching characteristics: It is drain current and drain-to-source voltage profiles when they are turned- ON-to-OFF and OFF-to-ON (during transition).<br>
+
+
+
+<center>
+<img src="images/th6.png" height="350px">
+
+<br>
+Fig. 5. Circuit diagram for Transfer characteristics.
+<br>
+</center>
+<br> 
+<div style="float: left; width:100%;"><br>
+
+The Transfer characteristics of MOSFET is shown in Fig. 6.
+
+</div>
+
+<center>
+<img src="images/th7.png" height="350px">
+
+<br>
+Fig. 6. Transfer characteristics of MOSFET.
+<br>
+</center>
+<br>
+
+<div style="float: left; width:100%;">
+  
+#### ("For more Information on mathematical analysis, see references")
+<br></div>
