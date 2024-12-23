@@ -1,39 +1,154 @@
 {
   "version": 2.0,
   "questions": [
-    {
-      "question": "This is a Sample Question 1?",
-      "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+    {    
+
+      "question": "1. Select the false statement:",
+      "answers": {  
+        "a": "MOSFET has three terminals: Drain, Source and Gate.",
+        "b": "MOSFET is a three-layer semiconductor device.",
+        "c": "MOSFET exhibits tail current.",  
+        "d": "MOSFET is a voltage controlled device."
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "a": "Explanation 1",
         "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "c": "Explanation 3: IGBT exhibits tail current.",
+        "d": "Explanation 4"
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+      
+    {
+
+      "question": "2. Which of the following devices is suitable for high frequency switching applications?",
+      "answers": {
+        "a": "SCR",
+        "b": "TRIAC",
+        "c": "MOSFET ",
+        "d": "IGBT"
+      },
+      "explanations": {
+        "a": "Explanation 1",
+        "b": "Explanation 2",
+        "c": "Explanation 3: MOSFET is a ‘fast’ device and is capable of operating at high switching frequencies.",
+        "d": "Explanation 4"
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    
+    {
+
+      "question": "3. Identify the three terminals of MOSFET- drain (D), source (S) and gate (G) in the figure given below from left-to-right.<br><center><img src='images/pr1.png' height='300px'></center><br>",
+      "answers": {
+        "a": "(i)- gate, (ii)- drain, (iii)- source",
+        "b": "(i)- source, (ii)- drain, (iii)- gate",
+        "c": "(i)- gate, (ii)- source, (iii)- drain",
+        "d": "(i)- drain, (ii)- source, (iii)- gate"
+      },
+      "explanations": {
+        "a": "Explanation 1: Standard nomenclature adopted.",
+        "b": "Explanation 2",
+        "c": "Explanation 3",
+        "d": "Explanation 4"
       },
       "correctAnswer": "a",
       "difficulty": "beginner"
     },
+        
     {
-      "question": "This is a Sample Question 2?",
+
+      "question": "4. Which of the following statements is correct?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "MOSFET is a voltage controlled device",
+        "b": "Switching speed of IGBT is faster than MOSFET",
+        "c": "MOSFET is a current controlled device",
+        "d": "MOSFET is suitable for line frequency AC-DC rectifiers"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "a": "Explanation 1: MOSFET is turned- ON/ OFF by applying or removing gate-to-source voltage. Hence, it is a voltage controlled device. Also compared to MOSFET, IGBT switching frequency is low.",
         "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "c": "Explanation 3",
+        "d": "Explanation 4"
       },
-      "correctAnswer": "c",
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+
+      {
+
+      "question": "5. Which of the following is the correct for MOSFET from application point of view?",
+      "answers": {
+        "a": "High power, high frequency",
+        "b": "Low power, high frequency",
+        "c": "Low power, low frequency",
+        "d": "High power, low frequency"
+      },
+      "explanations": {
+        "a": "Explanation 1",
+        "b": "Explanation 2: Usually, MOSFET is used for high frequency switching and also handles lower power levels compared to IGBT.",
+        "c": "Explanation 3",
+        "d": "Explanation 4"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+   
+      {    
+      "question": "6. The correct symbolic representation of an MOSFET is?",
+      "answers": {
+        "a": "<img src='images/pr2.png' height='70px'>",
+        "b": "<img src='images/pr3.png' height='70px'>",
+        "c": "<img src='images/pr4.png' height='70px'>",
+        "d": "<img src='images/pr5.png' height='70px'>"
+      },
+      "explanations": {
+        "a": "Explanation 1",
+        "b": "Explanation 2",
+        "c": "Explanation 3",
+        "d": "Explanation 4: Standard circuit symbol."
+      },
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+   
+      {    
+      "question": "7. Choose the correct statement.",
+      "answers": {
+        "a": "MOSFET is a current controlled device.",
+        "b": "MOSFET is a voltage controlled device.",
+        "c": "MOSFET is an uncontrolled device.",
+        "d": "MOSFET is a semi-controlled device."
+      },
+      "explanations": {
+        "a": "Explanation 1",
+        "b": "Explanation 2: MOSFET is turned- ON/ OFF by applying or removing gate-to-source voltage. Hence, it is a voltage controlled device.",
+        "c": "Explanation 3",
+        "d": "Explanation 4"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+   
+      {    
+      "question": "8. MOSFET is capable of blocking:",
+      "answers": {
+        "a": "neither positive nor negative drain-to-source voltages.",
+        "b": "only positive drain-to-source voltages.",
+        "c": "only negative drain-to-source voltages.",
+        "d": "both positive and negative drain-to-source voltages."
+      },
+      "explanations": {
+        "a": "Explanation 1",
+        "b": "Explanation 2",
+        "c": "Explanation 3",
+        "d": "Explanation 4: In forward blocking state, MOSFET blocks positive drain-to-source voltage while in reverse blocking mode, it blocks negative voltage."
+      },
+      "correctAnswer": "d",
       "difficulty": "beginner"
     }
+
   ]
 }
